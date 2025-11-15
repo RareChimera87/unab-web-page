@@ -1,0 +1,34 @@
+:root {
+    /* Colors from Figma */
+    --primary-green: #8CC63F;
+    --gray-bg: #E8E8E8;
+    --gray-input: #CCCCCC;
+    --text-gray: #999999;
+    --text-dark: #333333;
+    --white: #FFFFFF;
+    
+    /* Typography */
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 0.5rem;
+    --spacing-lg: 1rem;
+    
+    /* Borders */
+    --radius-input: 8px;
+    --radius-button: 8px;
+
+    /* Header/Footer */
+    --gray-header: #999999;
+    --gray-footer: #808080;
+
+    /* Service icon backgrounds */
+    --beige-light: #E5D4B5;
+    
+    /* Bottom buttons */
+    --orange-button: #F7931E;
+    --primary-blue: #4B61D1;
+    --purple-button: #8B2E99;
+}
