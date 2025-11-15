@@ -64,7 +64,7 @@
     background-color: #4B61D1;
 }
 /* ========================================
-   MAIN CONTENT (adjusted for fixed header)
+   MAIN CONTENT
    ======================================== */
 .main-content {
     min-height: calc(100vh - 140px);
@@ -83,7 +83,7 @@
 }
 
 /* ========================================
-   LOGIN FORM (ORIGINAL - DON'T TOUCH)
+   LOGIN FORM
    ======================================== */
 
 /* Center the login card on screen */
@@ -255,7 +255,7 @@
 }
 
 /* ========================================
-   BOTTOM BUTTONS (3 colored buttons)
+   BOTTOM BUTTONS
    ======================================== */
 
 .bottom-buttons {
@@ -308,7 +308,7 @@
 }
 
 /* ========================================
-   FOOTER (NEW)
+   FOOTER
    ======================================== */
 
 .site-footer {
