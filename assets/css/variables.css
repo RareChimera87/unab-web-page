@@ -1,14 +1,15 @@
 :root {
     --primary-green: #8CC63F;
+    --primary-blue: #4B61D1;
+    --dark-blue: #3D4D6A;
     --gray-bg: #E8E8E8;
     --gray-input: #CCCCCC;
     --text-gray: #999999;
     --text-dark: #333333;
     --white: #FFFFFF;
-    --dark-blue: #3D4D6A;
     
     /* Fonts */
-    --font-primary: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-primary: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
     /* Spacing */
     --spacing-xs: 0.25rem;
@@ -31,7 +32,7 @@
     
     /* Bottom buttons */
     --orange-button: #F7931E;
-    --primary-blue: #4B61D1;
-    --primary-green: #8CC63F;
+    --blue-button: #4B61D1;
+    --green-button: #8CC63F;
     --purple-button: #8B2E99;
 }

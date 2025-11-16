@@ -19,7 +19,6 @@
 }
 
 .header-content {
-    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -61,10 +60,10 @@
     border-radius: 50%;
 }
 
-.dot-orange { background-color: #F7931E; }
-.dot-purple { background-color: purple; }
-.dot-green { background-color: #8CC63F; }
-.dot-blue { background-color: #4B61D1; }
+.dot-orange { background-color: var(--orange-button); }
+.dot-purple { background-color: var(--purple-button); }
+.dot-green { background-color: var(--green-button); }
+.dot-blue { background-color: var(--blue-button); }
 
 /* ========================================
    MAIN CONTENT (Centered layout)
@@ -304,7 +303,6 @@
 }
 
 .footer-content {
-    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     align-items: center;
