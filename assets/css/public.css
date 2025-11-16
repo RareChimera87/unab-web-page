@@ -5,10 +5,11 @@
    ======================================== */
 
 /* ========================================
-   HEADER - Simple Logo Only
+   LAYOUT COMPONENTS
    ======================================== */
 
-.public-header {
+/* Header */
+.header {
     background-color: var(--color-gray);
     padding: 0.75rem 1.5rem;
     position: fixed;
@@ -19,37 +20,37 @@
     box-shadow: var(--shadow-sm);
 }
 
-.public-header__content {
+.header__content {
     margin: 0 auto;
     display: flex;
     align-items: center;
 }
 
-.public-header__logo {
+.header__logo {
     display: flex;
     align-items: center;
     gap: 0.25rem;
 }
 
-.public-header__logo-img {
+.header__logo-img {
     height: 40px;
     width: auto;
 }
 
-/* Fallback text logo */
-.public-header__logo-text {
+/* Text logo variant - for login2.html */
+.header__logo-text {
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--color-text-primary);
 }
 
-.public-header__logo-u {
+.header__logo-u {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--color-accent-orange);
 }
 
-.public-header__logo-dots {
+.header__logo-dots {
     display: flex;
     gap: 0.25rem;
     margin-left: 0.25rem;
@@ -70,7 +71,7 @@
    MAIN CONTENT AREA
    ======================================== */
 
-.public-main {
+.main {
     min-height: calc(100vh - 120px);
     padding-top: 70px;
     display: flex;
@@ -79,7 +80,7 @@
 }
 
 /* ========================================
-   AUTH FORM (Login/Register)
+   AUTH COMPONENTS
    ======================================== */
 
 .auth-container {
@@ -112,6 +113,10 @@
     flex-direction: column;
     gap: var(--space-sm);
 }
+
+/* ========================================
+   FORM COMPONENTS
+   ======================================== */
 
 .form-field {
     position: relative;
@@ -190,7 +195,7 @@
 }
 
 /* ========================================
-   SERVICES SECTION (Quick Access Icons)
+   SERVICES COMPONENTS
    ======================================== */
 
 .services {
@@ -200,7 +205,7 @@
     padding: var(--space-xl) var(--space-md);
 }
 
-.services__grid {
+.services-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: var(--space-md);
@@ -238,6 +243,8 @@
 }
 
 .service-item__icon-svg {
+    width: 45px;
+    height: 45px;
     color: var(--color-gray-darkest);
 }
 
@@ -250,7 +257,7 @@
 }
 
 /* ========================================
-   BOTTOM BUTTONS (External Links)
+   EXTERNAL LINKS COMPONENTS
    ======================================== */
 
 .external-links {
@@ -295,41 +302,53 @@
 .external-link--purple { background-color: var(--color-accent-purple); }
 
 /* ========================================
-   FOOTER - Simple
+   FOOTER
    ======================================== */
 
-.public-footer {
+.footer {
     background-color: var(--color-gray-dark);
     padding: var(--space-md) var(--space-xl);
     color: var(--color-white);
 }
 
-.public-footer__content {
+.footer__content {
     margin: 0 auto;
     display: flex;
-    align-items: center;
+    flex-direction: row; /* Side by side */
+    align-items: center; /* Vertically center both logo and text */
     gap: var(--space-md);
 }
 
-.public-footer__logo-img,
-.public-footer__logo-svg {
+.footer__logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* Prevent logo from shrinking */
+}
+
+.footer__logo-img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer__logo-svg {
     width: 30px;
     height: 30px;
     color: var(--color-white);
 }
 
-.public-footer__text {
+.footer__text {
     font-size: 0.875rem;
     line-height: 1.4;
+    text-align: left; /* Align text to the left */
 }
 
-.public-footer__text p {
+.footer__text p {
     margin: 0;
-    display: inline;
-    margin-right: 0.5rem;
+    display: block; /* Ensure each paragraph is on its own line */
+    margin-bottom: 0.25rem;
 }
 
-.public-footer__copyright {
+.footer__copyright {
     opacity: 0.8;
     font-size: 0.8rem;
 }
