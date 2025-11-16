@@ -1,15 +1,20 @@
 /* ========================================
+   APP PAGES STYLESHEET
+   Used for: profile.html and other authenticated pages
+   ======================================== */
+
+/* ========================================
    HEADER WITH MEGA MENU
    ======================================== */
 
 .app-header {
-    background-color: var(--gray-header);
+    background-color: var(--color-gray);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: var(--z-header);
+    box-shadow: var(--shadow-md);
 }
 
 /* Single unified header bar */
@@ -50,10 +55,10 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 0.75rem;
-    background-color: var(--dark-blue);
+    background-color: var(--color-accent-dark);
     border: none;
     border-radius: var(--radius-sm);
-    color: var(--white);
+    color: var(--color-white);
     font-size: 0.85rem;
     font-weight: 500;
     cursor: pointer;
@@ -78,10 +83,10 @@
     top: 75px; /* Below header */
     left: 0;
     right: 0;
-    background-color: var(--white);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    padding: var(--spacing-xl);
-    z-index: 999;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-xl);
+    z-index: var(--z-dropdown);
     max-height: 70vh;
     overflow-y: auto;
 }
@@ -95,20 +100,22 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-xl);
+    gap: var(--space-xl);
 }
 
 .dropdown-section h4 {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: var(--spacing-md);
-    padding-bottom: var(--spacing-sm);
-    border-bottom: 2px solid var(--primary-green);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--color-primary);
 }
 
 .dropdown-section ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .dropdown-section li {
@@ -116,7 +123,7 @@
 }
 
 .dropdown-section a {
-    color: var(--text-gray);
+    color: var(--color-gray);
     font-size: 0.9rem;
     text-decoration: none;
     transition: color 0.3s;
@@ -125,7 +132,7 @@
 }
 
 .dropdown-section a:hover {
-    color: var(--primary-green);
+    color: var(--color-primary);
     padding-left: 0.5rem;
 }
 
@@ -136,22 +143,22 @@
 .user-section {
     display: flex;
     align-items: center;
-    gap: var(--spacing-md);
+    gap: var(--space-md);
     margin-left: auto;
 }
 
 .user-profile {
     display: flex;
     align-items: center;
-    gap: var(--spacing-md);
+    gap: var(--space-md);
 }
 
 .user-avatar {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     object-fit: cover;
-    border: 2px solid var(--white);
+    border: 2px solid var(--color-white);
     flex-shrink: 0;
 }
 
@@ -163,13 +170,13 @@
 
 .last-login {
     font-size: 0.7rem;
-    color: var(--text-dark);
+    color: var(--color-text-primary);
     font-weight: 400;
 }
 
 .user-name {
     font-size: 0.9rem;
-    color: var(--text-dark);
+    color: var(--color-text-primary);
     font-weight: 600;
 }
 
@@ -190,13 +197,13 @@
 }
 
 .btn-perfil {
-    background-color: var(--primary-green);
-    color: var(--white);
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 
 .btn-logout {
-    background-color: #dc3545;
-    color: var(--white);
+    background-color: var(--color-error);
+    color: var(--color-white);
 }
 
 .btn-perfil:hover,
@@ -211,13 +218,13 @@
 .app-main {
     padding-top: 75px;
     min-height: calc(100vh - 75px);
-    background-color: var(--gray-bg);
+    background-color: var(--color-gray-light);
 }
 
 .app-container {
     max-width: 95%;
     margin: 0 auto;
-    padding: var(--spacing-xl);
+    padding: var(--space-xl);
 }
 
 /* ========================================
@@ -225,32 +232,32 @@
    ======================================== */
 
 .profile-section {
-    background: var(--white);
+    background: var(--color-white);
     border-radius: var(--radius-lg);
-    padding: var(--spacing-xl);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: var(--spacing-xl);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--space-xl);
 }
 
 .section-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: var(--spacing-lg);
-    padding-bottom: var(--spacing-md);
-    border-bottom: 2px solid var(--gray-bg);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 2px solid var(--color-gray-light);
 }
 
 .section-title {
     font-size: 1.75rem;
     font-weight: 400;
-    color: var(--primary-green);
+    color: var(--color-primary);
 }
 
 .btn-action {
-    padding: 0.675rem var(--spacing-lg);
-    background-color: var(--primary-green);
-    color: var(--white);
+    padding: 0.675rem var(--space-lg);
+    background-color: var(--color-primary);
+    color: var(--color-white);
     border: none;
     border-radius: var(--radius-md);
     font-size: 0.95rem;
@@ -267,22 +274,22 @@
 .profile-grid {
     display: grid;
     grid-template-columns: 150px 1fr;
-    gap: var(--spacing-xl);
-    margin-bottom: var(--spacing-xl);
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
 }
 
 .profile-photo img {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     object-fit: cover;
-    border: 3px solid var(--gray-input);
+    border: 3px solid var(--color-gray-medium);
 }
 
 .profile-details {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-md);
+    gap: var(--space-md);
 }
 
 .info-item {
@@ -294,62 +301,45 @@
 .info-label {
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--color-text-primary);
 }
 
 .info-value {
     font-size: 0.95rem;
-    color: var(--text-gray);
+    color: var(--color-gray);
 }
 
 /* Update section (password change, etc.) */
 .update-box {
-    background-color: #fff9e6;
-    border: 2px solid var(--orange-button);
+    background-color: var(--color-warning-bg);
+    border: 2px solid var(--color-accent-orange);
     border-radius: var(--radius-md);
-    padding: var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
 }
 
 .update-box h3 {
     font-size: 1.1rem;
-    color: var(--text-dark);
-    margin-bottom: var(--spacing-md);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-md);
 }
 
 .password-input {
     width: 250px;
     padding: 0.675rem;
-    background-color: var(--gray-input);
+    background-color: var(--color-gray-medium);
     border: none;
     border-radius: var(--radius-sm);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--space-md);
 }
 
 .requirements-list {
     list-style: none;
     font-size: 0.85rem;
-    color: var(--text-dark);
+    color: var(--color-text-primary);
     line-height: 1.8;
-}
-
-.info-box {
-    background-color: #f8f8f8;
-    border-left: 4px solid var(--primary-green);
-    border-radius: var(--radius-sm);
-    padding: var(--spacing-lg);
-}
-
-.info-box h4 {
-    font-size: 1rem;
-    color: var(--text-dark);
-    margin-bottom: var(--spacing-md);
-}
-
-.info-box ul {
-    list-style: none;
-    font-size: 0.9rem;
-    line-height: 2;
+    padding: 0;
+    margin: 0;
 }
 
 /* ========================================
@@ -357,9 +347,9 @@
    ======================================== */
 
 .app-footer {
-    background-color: var(--gray-footer);
-    padding: var(--spacing-xl);
-    color: var(--white);
+    background-color: var(--color-gray-dark);
+    padding: var(--space-xl);
+    color: var(--color-white);
 }
 
 .footer-grid {
@@ -367,18 +357,20 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: var(--spacing-xl);
+    gap: var(--space-xl);
 }
 
 .footer-section h4 {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--white);
-    margin-bottom: var(--spacing-md);
+    color: var(--color-white);
+    margin-bottom: var(--space-md);
 }
 
 .footer-section ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-section li {
@@ -386,7 +378,7 @@
 }
 
 .footer-section a {
-    color: var(--white);
+    color: var(--color-white);
     font-size: 0.85rem;
     text-decoration: none;
     opacity: 0.9;
@@ -401,7 +393,7 @@
 .footer-logo-section {
     display: flex;
     align-items: flex-start;
-    gap: var(--spacing-md);
+    gap: var(--space-md);
 }
 
 .footer-logo img {
