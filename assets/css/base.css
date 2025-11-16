@@ -1,14 +1,16 @@
 body {
-    font-family: var(--font-primary);
-    background-color: var(--gray-bg);
-    color: var(--text-dark);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    background-color: var(--color-gray-light);
+    color: var(--color-text-primary);
     line-height: 1.6;
 }
 
 a {
-    color: var(--text-gray);
+    color: var(--color-gray);
     text-decoration: none;
     font-size: 0.875rem;
+    transition: color 0.3s ease;
 }
 
 a:hover {

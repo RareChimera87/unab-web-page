@@ -1,75 +1,76 @@
 /* ========================================
-   PUBLIC PAGES (Pre-login)
-   Login, Register pages
+   PUBLIC PAGES STYLESHEET
+   Used for: login.html, register.html
+   Pre-authentication pages
    ======================================== */
 
 /* ========================================
-   HEADER (Simple, pre-login)
+   HEADER - Simple Logo Only
    ======================================== */
 
-.site-header {
-    background-color: var(--gray-header);
+.public-header {
+    background-color: var(--color-gray);
     padding: 0.75rem 1.5rem;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: var(--z-header);
+    box-shadow: var(--shadow-sm);
 }
 
-.header-content {
+.public-header__content {
     margin: 0 auto;
     display: flex;
     align-items: center;
 }
 
-.logo {
+.public-header__logo {
     display: flex;
     align-items: center;
     gap: 0.25rem;
 }
 
-.logo img {
+.public-header__logo-img {
     height: 40px;
     width: auto;
 }
 
-/* Text logo (backup) */
-.logo-text {
+/* Fallback text logo */
+.public-header__logo-text {
     font-size: 1.5rem;
     font-weight: 400;
-    color: var(--text-dark);
+    color: var(--color-text-primary);
 }
 
-.logo-u {
+.public-header__logo-u {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #F7931E;
+    color: var(--color-accent-orange);
 }
 
-.logo-dots {
+.public-header__logo-dots {
     display: flex;
     gap: 0.25rem;
     margin-left: 0.25rem;
 }
 
-.dot {
+.logo-dot {
     width: 8px;
     height: 8px;
-    border-radius: 50%;
+    border-radius: var(--radius-full);
 }
 
-.dot-orange { background-color: var(--orange-button); }
-.dot-purple { background-color: var(--purple-button); }
-.dot-green { background-color: var(--green-button); }
-.dot-blue { background-color: var(--blue-button); }
+.logo-dot--orange { background-color: var(--color-accent-orange); }
+.logo-dot--purple { background-color: var(--color-accent-purple); }
+.logo-dot--green { background-color: var(--color-primary); }
+.logo-dot--blue { background-color: var(--color-secondary); }
 
 /* ========================================
-   MAIN CONTENT (Centered layout)
+   MAIN CONTENT AREA
    ======================================== */
 
-.main-content {
+.public-main {
     min-height: calc(100vh - 120px);
     padding-top: 70px;
     display: flex;
@@ -78,69 +79,70 @@
 }
 
 /* ========================================
-   LOGIN/REGISTER FORM
+   AUTH FORM (Login/Register)
    ======================================== */
 
-.login-container {
+.auth-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: var(--spacing-lg) 0;
+    padding: var(--space-lg) 0;
 }
 
-.login-card {
-    background: var(--white);
-    padding: var(--spacing-lg) var(--spacing-xl);
+.auth-card {
+    background: var(--color-white);
+    padding: var(--space-lg) var(--space-xl);
     border-radius: var(--radius-lg);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
     width: 100%;
     max-width: 380px;
 }
 
-.login-title {
+.auth-card__title {
     font-size: 2rem;
     font-weight: 400;
-    color: var(--text-gray);
-    margin-bottom: var(--spacing-md);
+    color: var(--color-gray);
+    margin-bottom: var(--space-md);
     text-align: left;
 }
 
-.login-form {
+.auth-form {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-sm);
+    gap: var(--space-sm);
 }
 
-.form-group {
+.form-field {
     position: relative;
 }
 
-.form-group input {
+.form-field__input {
     width: 100%;
     padding: 0.875rem;
-    background-color: var(--gray-input);
+    background-color: var(--color-gray-medium);
     border: none;
     border-radius: var(--radius-md);
     font-size: 0.95rem;
-    color: var(--text-dark);
+    color: var(--color-text-primary);
+    transition: outline 0.3s ease;
 }
 
-.form-group input::placeholder {
-    color: var(--white);
+.form-field__input::placeholder {
+    color: var(--color-white);
 }
 
-.form-group input:focus {
-    outline: 2px solid var(--primary-green);
+.form-field__input:focus {
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
 }
 
-/* Password field with eye icon */
-.password-group {
+/* Password field with toggle */
+.form-field--password {
     position: relative;
 }
 
-.toggle-password {
+.form-field__toggle {
     position: absolute;
     right: 0.875rem;
     top: 50%;
@@ -148,186 +150,186 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: var(--white);
+    color: var(--color-white);
     padding: 0.25rem;
     display: flex;
     align-items: center;
+    transition: color 0.3s ease;
 }
 
-.toggle-password:hover {
-    color: var(--text-gray);
+.form-field__toggle:hover {
+    color: var(--color-gray);
 }
 
-/* Links */
-.form-links-top,
-.form-links-bottom {
+/* Form links */
+.form-link {
     text-align: right;
 }
 
 /* Submit button */
-.btn-login {
+.btn-submit {
     width: 100%;
     padding: 0.875rem;
-    background-color: var(--primary-green);
-    color: var(--white);
+    background-color: var(--color-primary);
+    color: var(--color-white);
     border: none;
     border-radius: var(--radius-md);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: opacity 0.3s;
-    margin-top: var(--spacing-sm);
+    transition: opacity 0.3s ease;
+    margin-top: var(--space-sm);
 }
 
-.btn-login:hover {
+.btn-submit:hover {
     opacity: 0.9;
 }
 
-.btn-login:active {
+.btn-submit:active {
     transform: translateY(1px);
 }
 
 /* ========================================
-   SERVICE ICONS (on login page)
+   SERVICES SECTION (Quick Access Icons)
    ======================================== */
 
-.services-container {
+.services {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: var(--space-xl) var(--space-md);
 }
 
-.services-grid {
+.services__grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
 }
 
-.service-icon {
+.service-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
     gap: 0.5rem;
-    transition: transform 0.2s;
+    transition: transform 0.2s ease;
 }
 
-.service-icon:hover {
+.service-item:hover {
     transform: translateY(-4px);
 }
 
-.icon-box {
+.service-item__icon-box {
     width: 80px;
     height: 80px;
-    background-color: var(--beige-light);
+    background-color: var(--color-icon-bg);
     border-radius: var(--radius-lg);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-sm);
 }
 
-.icon-box img {
+.service-item__icon-img {
     width: 45px;
     height: 45px;
     object-fit: contain;
 }
 
-.icon-box svg {
-    color: #666;
+.service-item__icon-svg {
+    color: var(--color-gray-darkest);
 }
 
-.service-icon span {
+.service-item__label {
     font-size: 0.75rem;
-    color: var(--text-dark);
+    color: var(--color-text-primary);
     text-align: center;
     font-weight: 500;
     line-height: 1.2;
 }
 
 /* ========================================
-   BOTTOM BUTTONS (3 colored buttons)
+   BOTTOM BUTTONS (External Links)
    ======================================== */
 
-.bottom-buttons {
+.external-links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-md);
+    gap: var(--space-md);
 }
 
-.btn-bottom {
-    padding: var(--spacing-md);
+.external-link {
+    padding: var(--space-md);
     border-radius: var(--radius-md);
     text-decoration: none;
-    color: var(--white);
+    color: var(--color-white);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     font-weight: 600;
-    transition: opacity 0.3s, transform 0.2s;
+    transition: opacity 0.3s ease, transform 0.2s ease;
     min-height: 70px;
 }
 
-.btn-bottom:hover {
+.external-link:hover {
     opacity: 0.9;
     transform: translateY(-2px);
 }
 
-.btn-bottom span:first-child {
+.external-link__title {
     font-size: 1rem;
 }
 
-.btn-subtitle {
+.external-link__subtitle {
     font-size: 0.8rem;
     font-weight: 400;
     opacity: 0.95;
     margin-top: 0.25rem;
 }
 
-.btn-orange { background-color: var(--orange-button); }
-.btn-blue { background-color: var(--primary-blue); }
-.btn-purple { background-color: var(--purple-button); }
+.external-link--orange { background-color: var(--color-accent-orange); }
+.external-link--blue { background-color: var(--color-secondary); }
+.external-link--purple { background-color: var(--color-accent-purple); }
 
 /* ========================================
-   FOOTER (Simple)
+   FOOTER - Simple
    ======================================== */
 
-.site-footer {
-    background-color: var(--gray-footer);
-    padding: var(--spacing-md) var(--spacing-xl);
-    color: var(--white);
+.public-footer {
+    background-color: var(--color-gray-dark);
+    padding: var(--space-md) var(--space-xl);
+    color: var(--color-white);
 }
 
-.footer-content {
+.public-footer__content {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    gap: var(--spacing-md);
+    gap: var(--space-md);
 }
 
-.footer-logo img,
-.footer-logo svg {
+.public-footer__logo-img,
+.public-footer__logo-svg {
     width: 30px;
     height: 30px;
-    color: var(--white);
+    color: var(--color-white);
 }
 
-.footer-text {
+.public-footer__text {
     font-size: 0.875rem;
     line-height: 1.4;
 }
 
-.footer-text p {
+.public-footer__text p {
     margin: 0;
     display: inline;
     margin-right: 0.5rem;
 }
 
-.footer-copyright {
+.public-footer__copyright {
     opacity: 0.8;
     font-size: 0.8rem;
 }

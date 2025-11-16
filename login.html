@@ -11,44 +11,51 @@
 </head>
 <body>
     <!-- HEADER -->
-    <header class="site-header">
-        <div class="header-content">
-            <div class="logo">
-                <img src="assets/images/LogoMiPortalU-acc.png" alt="MiPortal U Logo">
+    <header class="public-header">
+        <div class="public-header__content">
+            <div class="public-header__logo">
+                <img src="assets/images/LogoMiPortalU-acc.png" alt="MiPortal U Logo" class="public-header__logo-img">
             </div>
         </div>
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="main-content">
-        <div class="login-container">
-            <div class="login-card">
-                <h1 class="login-title">Log in</h1>
+    <main class="public-main">
+        
+        <!-- START: Login Form -->
+        <div class="auth-container">
+            <div class="auth-card">
+                <h1 class="auth-card__title">Log in</h1>
                 
-                <form action="/login" method="POST" class="login-form">
-                    <div class="form-group">
+                <form action="/login" method="POST" class="auth-form">
+                    <!-- Username Field -->
+                    <div class="form-field">
                         <input 
                             type="text" 
                             id="username" 
                             name="username" 
                             placeholder="Enter user name"
+                            class="form-field__input"
                             required
                         >
                     </div>
 
-                    <div class="form-links-top">
+                    <!-- Register Link -->
+                    <div class="form-link">
                         <a href="register.html">Don't have an account?</a>
                     </div>
 
-                    <div class="form-group password-group">
+                    <!-- Password Field with Toggle -->
+                    <div class="form-field form-field--password">
                         <input 
                             type="password" 
                             id="password" 
                             name="password" 
                             placeholder="Password"
+                            class="form-field__input"
                             required
                         >
-                        <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                        <button type="button" class="form-field__toggle" aria-label="Toggle password visibility">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 5C5.63636 5 2 12 2 12C2 12 5.63636 19 12 19C18.3636 19 22 12 22 12C22 12 18.3636 5 12 5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -56,89 +63,100 @@
                         </button>
                     </div>
 
-                    <div class="form-links-bottom">
+                    <!-- Forgot Password Link -->
+                    <div class="form-link">
                         <a href="#">Forgot password?</a>
                     </div>
 
-                    <button type="submit" class="btn-login">Login</button>
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn-submit">Login</button>
                 </form>
             </div>
         </div>
+        <!-- END: Login Form -->
         
-        <!-- Service Icons -->
-        <div class="services-container">
-            <div class="services-grid">
-                <a class="service-icon" href="https://mail.google.com/a/unab.edu.co" target="_blank">
-                    <div class="icon-box">
-                        <img src="assets/images/icon-acceso-correo.png" alt="E-Mail">
+        <!-- START: Services Quick Access -->
+        <section class="services">
+            <div class="services__grid">
+                <a class="service-item" href="https://mail.google.com/a/unab.edu.co" target="_blank">
+                    <div class="service-item__icon-box">
+                        <img src="assets/images/icon-acceso-correo.png" alt="E-Mail" class="service-item__icon-img">
                     </div>
-                    <span>E-Mail</span>
+                    <span class="service-item__label">E-Mail</span>
                 </a>
-                <a href="https://cosmos.unab.edu.co/" target="_blank" class="service-icon">
-                    <div class="icon-box">
-                        <img src="assets/images/icon-acceso-cosmos.png" alt="Cosmos">
+                
+                <a href="https://cosmos.unab.edu.co/" target="_blank" class="service-item">
+                    <div class="service-item__icon-box">
+                        <img src="assets/images/icon-acceso-cosmos.png" alt="Cosmos" class="service-item__icon-img">
                     </div>
-                    <span>Cosmos</span>
+                    <span class="service-item__label">Cosmos</span>
                 </a>
-                <a href="https://sibu.unab.edu.co/" target="_blank" class="service-icon">
-                    <div class="icon-box">
-                        <img src="assets/images/icon-acceso-biblioteca.png" alt="Biblioteca">
+                
+                <a href="https://sibu.unab.edu.co/" target="_blank" class="service-item">
+                    <div class="service-item__icon-box">
+                        <img src="assets/images/icon-acceso-biblioteca.png" alt="Biblioteca" class="service-item__icon-img">
                     </div>
-                    <span>Biblioteca</span>
+                    <span class="service-item__label">Biblioteca</span>
                 </a>
-                <a href="https://unab.instructure.com/login/saml" target="_blank" class="service-icon">
-                    <div class="icon-box">
-                        <img src="assets/images/icon-acceso-Canvas.png" alt="Canvas">
+                
+                <a href="https://unab.instructure.com/login/saml" target="_blank" class="service-item">
+                    <div class="service-item__icon-box">
+                        <img src="assets/images/icon-acceso-Canvas.png" alt="Canvas" class="service-item__icon-img">
                     </div>
-                    <span>Canvas</span>
+                    <span class="service-item__label">Canvas</span>
                 </a>
-                <a href="https://tema.unab.edu.co/" target="_blank" class="service-icon">
-                    <div class="icon-box">
-                        <img src="assets/images/icon-acceso-tema.png" alt="TEMA">
+                
+                <a href="https://tema.unab.edu.co/" target="_blank" class="service-item">
+                    <div class="service-item__icon-box">
+                        <img src="assets/images/icon-acceso-tema.png" alt="TEMA" class="service-item__icon-img">
                     </div>
-                    <span>TEMA</span>
+                    <span class="service-item__label">TEMA</span>
                 </a>
-                <a href="https://portal.office.com" target="_blank" class="service-icon"> 
-                    <div class="icon-box">
-                        <img src="assets/images/icon-acceso-o365.png" alt="Office365">
+                
+                <a href="https://portal.office.com" target="_blank" class="service-item"> 
+                    <div class="service-item__icon-box">
+                        <img src="assets/images/icon-acceso-o365.png" alt="Office365" class="service-item__icon-img">
                     </div>
-                    <span>Office365</span>
+                    <span class="service-item__label">Office365</span>
                 </a>
-                <a href="https://bienestar.unab.edu.co/" target="_blank" class="service-icon">
-                    <div class="icon-box">
-                        <img src="assets/images/icon-acceso-bienestar.png" alt="Bienestar">
+                
+                <a href="https://bienestar.unab.edu.co/" target="_blank" class="service-item">
+                    <div class="service-item__icon-box">
+                        <img src="assets/images/icon-acceso-bienestar.png" alt="Bienestar" class="service-item__icon-img">
                     </div>
-                    <span>Bienestar<br>en línea</span>
+                    <span class="service-item__label">Bienestar<br>en línea</span>
                 </a>
             </div>
 
-            <!-- Bottom Buttons -->
-            <div class="bottom-buttons">
-                <a href="https://unab.edu.co/" target="_blank" class="btn-bottom btn-orange">
-                    <span>unab.edu.co</span>
-                    <span class="btn-subtitle">Público general</span>
+            <!-- External Link Buttons -->
+            <div class="external-links">
+                <a href="https://unab.edu.co/" target="_blank" class="external-link external-link--orange">
+                    <span class="external-link__title">unab.edu.co</span>
+                    <span class="external-link__subtitle">Público general</span>
                 </a>
-                <a href="https://unabdigital.unab.edu.co/" target="_blank" class="btn-bottom btn-blue">
-                    <span>UNAB digital</span>
-                    <span class="btn-subtitle">Estudiantes virtuales</span>
+                <a href="https://unabdigital.unab.edu.co/" target="_blank" class="external-link external-link--blue">
+                    <span class="external-link__title">UNAB digital</span>
+                    <span class="external-link__subtitle">Estudiantes virtuales</span>
                 </a>
-                <a href="https://www.unab.edu.co/graduados" target="_blank" class="btn-bottom btn-purple">
-                    <span>Impulsa</span>
-                    <span class="btn-subtitle">Graduados</span>
+                <a href="https://www.unab.edu.co/graduados" target="_blank" class="external-link external-link--purple">
+                    <span class="external-link__title">Impulsa</span>
+                    <span class="external-link__subtitle">Graduados</span>
                 </a>
             </div>
-        </div>
+        </section>
+        <!-- END: Services Quick Access -->
+
     </main>
 
     <!-- FOOTER -->
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="assets/images/logo-unab-vert.png" alt="UNAB Logo">
+    <footer class="public-footer">
+        <div class="public-footer__content">
+            <div class="public-footer__logo">
+                <img src="assets/images/logo-unab-vert.png" alt="UNAB Logo" class="public-footer__logo-img">
             </div>
-            <div class="footer-text">
+            <div class="public-footer__text">
                 <p>Universidad Autónoma de Bucaramanga</p>
-                <p class="footer-copyright">© Todos los derechos reservados</p>
+                <p class="public-footer__copyright">© Todos los derechos reservados</p>
             </div>
         </div>
     </footer>
