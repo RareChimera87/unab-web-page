@@ -1,0 +1,400 @@
+/* ========================================
+   APP PAGES (Post-login)
+   All authenticated pages
+   ======================================== */
+
+/* ========================================
+   HEADER WITH MEGA MENU
+   ======================================== */
+
+.app-header {
+    background-color: var(--dark-blue);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header-top {
+    background-color: var(--gray-header);
+    padding: 0.75rem 1.5rem;
+}
+
+.header-top-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+/* User section (right side of header) */
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.user-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--white);
+}
+
+.user-name {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.btn-perfil,
+.btn-logout {
+    padding: 0.5rem var(--spacing-md);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.btn-perfil {
+    background-color: var(--primary-green);
+    color: var(--white);
+}
+
+.btn-logout {
+    background-color: #dc3545;
+    color: var(--white);
+}
+
+.btn-perfil:hover,
+.btn-logout:hover {
+    opacity: 0.85;
+}
+
+/* ========================================
+   MEGA MENU NAVIGATION
+   ======================================== */
+
+.mega-menu-nav {
+    background-color: var(--dark-blue);
+    padding: 0;
+}
+
+.mega-menu-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.mega-menu-item {
+    position: relative;
+    flex: 1;
+}
+
+.menu-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: var(--spacing-md) var(--spacing-sm);
+    background: none;
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.mega-menu-item:last-child .menu-trigger {
+    border-right: none;
+}
+
+.menu-trigger:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-trigger svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Mega menu dropdown (hidden by default, will show with JS) */
+.mega-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: var(--spacing-lg);
+    z-index: 999;
+}
+
+.mega-dropdown.active {
+    display: block;
+}
+
+.dropdown-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.dropdown-section h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+.dropdown-section ul {
+    list-style: none;
+}
+
+.dropdown-section li {
+    margin-bottom: 0.5rem;
+}
+
+.dropdown-section a {
+    color: var(--text-gray);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.dropdown-section a:hover {
+    color: var(--primary-green);
+}
+
+/* ========================================
+   MAIN CONTENT AREA
+   ======================================== */
+
+.app-main {
+    padding-top: 140px; /* Header height (top bar + mega menu) */
+    min-height: calc(100vh - 140px);
+    background-color: var(--gray-bg);
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xl);
+}
+
+/* ========================================
+   PROFILE PAGE CONTENT
+   ======================================== */
+
+.profile-section {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--gray-bg);
+}
+
+.section-title {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--primary-green);
+}
+
+.btn-action {
+    padding: 0.675rem var(--spacing-lg);
+    background-color: var(--primary-green);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.btn-action:hover {
+    opacity: 0.9;
+}
+
+/* Profile info grid */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--gray-input);
+}
+
+.profile-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.info-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.info-value {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+}
+
+/* Update section (password change, etc.) */
+.update-box {
+    background-color: #fff9e6;
+    border: 2px solid var(--orange-button);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.update-box h3 {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.password-input {
+    width: 250px;
+    padding: 0.675rem;
+    background-color: var(--gray-input);
+    border: none;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.requirements-list {
+    list-style: none;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    line-height: 1.8;
+}
+
+.info-box {
+    background-color: #f8f8f8;
+    border-left: 4px solid var(--primary-green);
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-lg);
+}
+
+.info-box h4 {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.info-box ul {
+    list-style: none;
+    font-size: 0.9rem;
+    line-height: 2;
+}
+
+/* ========================================
+   FOOTER (Expanded with links)
+   ======================================== */
+
+.app-footer {
+    background-color: var(--gray-footer);
+    padding: var(--spacing-xl);
+    color: var(--white);
+}
+
+.footer-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: var(--spacing-xl);
+}
+
+.footer-section h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: var(--white);
+    font-size: 0.85rem;
+    text-decoration: none;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.footer-section a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer-logo-section {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+}
+
+.footer-logo img {
+    width: 60px;
+    height: auto;
+}
+
+.footer-info p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin: 0;
+}

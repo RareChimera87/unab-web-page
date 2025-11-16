@@ -1,10 +1,15 @@
 /* ========================================
-   HEADER
+   PUBLIC PAGES (Pre-login)
+   Login, Register pages
+   ======================================== */
+
+/* ========================================
+   HEADER (Simple, pre-login)
    ======================================== */
 
 .site-header {
     background-color: var(--gray-header);
-    padding: 1rem 2rem;
+    padding: 0.75rem 1.5rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -16,6 +21,8 @@
 .header-content {
     max-width: 1400px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
 }
 
 .logo {
@@ -24,6 +31,12 @@
     gap: 0.25rem;
 }
 
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+/* Text logo (backup) */
 .logo-text {
     font-size: 1.5rem;
     font-weight: 400;
@@ -48,64 +61,44 @@
     border-radius: 50%;
 }
 
-.dot-orange {
-    background-color: #F7931E;
-}
+.dot-orange { background-color: #F7931E; }
+.dot-purple { background-color: purple; }
+.dot-green { background-color: #8CC63F; }
+.dot-blue { background-color: #4B61D1; }
 
-.dot-purple {
-    background-color: purple;
-}
-
-.dot-green {
-    background-color: #8CC63F;
-}
-
-.dot-blue {
-    background-color: #4B61D1;
-}
 /* ========================================
-   MAIN CONTENT
+   MAIN CONTENT (Centered layout)
    ======================================== */
+
 .main-content {
-    min-height: calc(100vh - 140px);
-    padding-top: 80px;
+    min-height: calc(100vh - 120px);
+    padding-top: 70px;
     display: flex;
-    flex-direction: column; /* Stack vertically */
+    flex-direction: column;
     align-items: center;
 }
 
-/* Move services below */
-.services-container {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 1rem 1rem;
-}
-
 /* ========================================
-   LOGIN FORM
+   LOGIN/REGISTER FORM
    ======================================== */
 
-/* Center the login card on screen */
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 1rem 0;
+    padding: var(--spacing-lg) 0;
 }
 
-/* The white login card */
 .login-card {
     background: var(--white);
-    padding: 1rem 1.5rem 1.5rem;
-    border-radius: 12px;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-radius: var(--radius-lg);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 380px;
 }
 
-/* "Log in" title */
 .login-title {
     font-size: 2rem;
     font-weight: 400;
@@ -114,24 +107,22 @@
     text-align: left;
 }
 
-/* Form spacing */
 .login-form {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
 }
 
-/* Input fields */
 .form-group {
     position: relative;
 }
 
 .form-group input {
     width: 100%;
-    padding: 1rem;
+    padding: 0.875rem;
     background-color: var(--gray-input);
     border: none;
-    border-radius: var(--radius-input);
+    border-radius: var(--radius-md);
     font-size: 0.95rem;
     color: var(--text-dark);
 }
@@ -152,7 +143,7 @@
 
 .toggle-password {
     position: absolute;
-    right: 1rem;
+    right: 0.875rem;
     top: 50%;
     transform: translateY(-50%);
     background: none;
@@ -168,28 +159,25 @@
     color: var(--text-gray);
 }
 
-/* Links positioning */
-.form-links-top {
-    text-align: right;
-    /*margin-bottom: 0.5rem;*/
-}
-
+/* Links */
+.form-links-top,
 .form-links-bottom {
     text-align: right;
 }
 
-/* Green login button */
+/* Submit button */
 .btn-login {
     width: 100%;
-    padding: 1rem;
+    padding: 0.875rem;
     background-color: var(--primary-green);
     color: var(--white);
     border: none;
-    border-radius: var(--radius-button);
+    border-radius: var(--radius-md);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: opacity 0.3s;
+    margin-top: var(--spacing-sm);
 }
 
 .btn-login:hover {
@@ -201,21 +189,21 @@
 }
 
 /* ========================================
-   SERVICE ICONS
+   SERVICE ICONS (on login page)
    ======================================== */
 
 .services-container {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    padding: 2rem 1rem 3rem;
+    padding: var(--spacing-xl) var(--spacing-md);
 }
 
 .services-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
 }
 
 .service-icon {
@@ -235,11 +223,17 @@
     width: 80px;
     height: 80px;
     background-color: var(--beige-light);
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
 }
 
 .icon-box svg {
@@ -255,18 +249,18 @@
 }
 
 /* ========================================
-   BOTTOM BUTTONS
+   BOTTOM BUTTONS (3 colored buttons)
    ======================================== */
 
 .bottom-buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: var(--spacing-md);
 }
 
 .btn-bottom {
-    padding: 1rem 1rem;
-    border-radius: 8px;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
     text-decoration: none;
     color: var(--white);
     display: flex;
@@ -292,27 +286,20 @@
     font-size: 0.8rem;
     font-weight: 400;
     opacity: 0.95;
+    margin-top: 0.25rem;
 }
 
-.btn-orange {
-    background-color: var(--orange-button);
-}
-
-.btn-blue {
-    background-color: var(--primary-blue);
-}
-
-.btn-purple {
-    background-color: var(--purple-button);
-}
+.btn-orange { background-color: var(--orange-button); }
+.btn-blue { background-color: var(--primary-blue); }
+.btn-purple { background-color: var(--purple-button); }
 
 /* ========================================
-   FOOTER
+   FOOTER (Simple)
    ======================================== */
 
 .site-footer {
     background-color: var(--gray-footer);
-    padding: 1rem 2rem;
+    padding: var(--spacing-md) var(--spacing-xl);
     color: var(--white);
 }
 
@@ -321,13 +308,14 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: var(--spacing-md);
 }
 
+.footer-logo img,
 .footer-logo svg {
-    color: var(--white);
     width: 30px;
     height: 30px;
+    color: var(--white);
 }
 
 .footer-text {
@@ -337,6 +325,8 @@
 
 .footer-text p {
     margin: 0;
+    display: inline;
+    margin-right: 0.5rem;
 }
 
 .footer-copyright {
