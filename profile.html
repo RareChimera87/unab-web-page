@@ -10,20 +10,21 @@
     <link rel="stylesheet" href="assets/css/app.css">
 </head>
 <body>
-    <!-- APP HEADER -->
-    <header class="app-header">
+    <!-- HEADER -->
+    <header class="header">
         <div class="header-bar">
             <!-- Logo -->
             <div class="logo">
                 <img src="assets/images/LogoMiPortalU-acc.png" alt="MiPortal U Logo">
             </div>
     
-            <!-- Mega Menu Navigation (Compact) -->
-            <nav class="mega-menu-nav">
-                <div class="mega-menu-content">
-                    <!-- Menu Item 1 -->
-                    <div class="mega-menu-item">
-                        <button class="menu-trigger" data-menu="servicios-electronicos">
+            <!-- START: Mega Menu -->
+            <nav class="mega-menu">
+                <div class="mega-menu__content">
+                    
+                    <!-- Servicios Electrónicos -->
+                    <div class="mega-menu__item">
+                        <button class="mega-menu__trigger" data-menu="servicios-electronicos">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"/>
                                 <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2"/>
@@ -31,7 +32,7 @@
                             </svg>
                             <span>Servicios Electrónicos</span>
                         </button>
-                        <div class="mega-dropdown" id="servicios-electronicos">
+                        <div class="mega-menu__dropdown" id="servicios-electronicos">
                             <div class="dropdown-grid">
                                 <div class="dropdown-section">
                                     <h4>Comunicación</h4>
@@ -61,16 +62,16 @@
                         </div>
                     </div>
     
-                    <!-- Menu Item 2 -->
-                    <div class="mega-menu-item">
-                        <button class="menu-trigger" data-menu="servicios-estudiantes">
+                    <!-- Servicios para Estudiantes -->
+                    <div class="mega-menu__item">
+                        <button class="mega-menu__trigger" data-menu="servicios-estudiantes">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2"/>
                                 <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
                             </svg>
                             <span>Servicios para Estudiantes</span>
                         </button>
-                        <div class="mega-dropdown" id="servicios-estudiantes">
+                        <div class="mega-menu__dropdown" id="servicios-estudiantes">
                             <div class="dropdown-grid">
                                 <div class="dropdown-section">
                                     <h4>Inscripción de cursos</h4>
@@ -115,9 +116,9 @@
                         </div>
                     </div>
     
-                    <!-- Menu Item 3 -->
-                    <div class="mega-menu-item">
-                        <button class="menu-trigger" data-menu="apoyo-estudiante">
+                    <!-- Apoyo al Estudiante -->
+                    <div class="mega-menu__item">
+                        <button class="mega-menu__trigger" data-menu="apoyo-estudiante">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
                                 <path d="M9.09 9C9.3251 8.33167 9.78915 7.76811 10.4 7.40913C11.0108 7.05016 11.7289 6.91894 12.4272 7.03871C13.1255 7.15849 13.7588 7.52152 14.2151 8.06353C14.6713 8.60553 14.9211 9.29152 14.92 10C14.92 12 11.92 13 11.92 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -125,7 +126,7 @@
                             </svg>
                             <span>Apoyo al Estudiante</span>
                         </button>
-                        <div class="mega-dropdown" id="apoyo-estudiante">
+                        <div class="mega-menu__dropdown" id="apoyo-estudiante">
                             <div class="dropdown-grid">
                                 <div class="dropdown-section">
                                     <h4>Pago de Matrícula</h4>
@@ -154,16 +155,16 @@
                         </div>
                     </div>
     
-                    <!-- Menu Item 4 -->
-                    <div class="mega-menu-item">
-                        <button class="menu-trigger" data-menu="info-administrativa">
+                    <!-- Información Administrativa -->
+                    <div class="mega-menu__item">
+                        <button class="mega-menu__trigger" data-menu="info-administrativa">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2"/>
                                 <polyline points="14 2 14 8 20 8" stroke="currentColor" stroke-width="2"/>
                             </svg>
                             <span>Información Administrativa</span>
                         </button>
-                        <div class="mega-dropdown" id="info-administrativa">
+                        <div class="mega-menu__dropdown" id="info-administrativa">
                             <div class="dropdown-grid">
                                 <div class="dropdown-section">
                                     <h4>Biblioteca</h4>
@@ -222,30 +223,35 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </nav>
+            <!-- END: Mega Menu -->
     
-            <!-- User Section (Redesigned) -->
+            <!-- START: User Section -->
             <div class="user-section">
                 <div class="user-profile">
                     <img src="assets/images/user-avatar-ai.jpg" alt="User Avatar" class="user-avatar">
                     <div class="user-details">
-                        <span class="last-login">Último ingreso: 17-Nov-2025 08:37:55</span>
-                        <span class="user-name">Jhon P. Perez Ardila</span>
+                        <span class="user-details__last-login">Último ingreso: 17-Nov-2025 08:37:55</span>
+                        <span class="user-details__name">Jhon P. Perez Ardila</span>
                     </div>
                 </div>
                 <div class="user-actions">
-                    <button class="btn-perfil">Perfil</button>
+                    <button class="btn-profile">Perfil</button>
                     <button class="btn-logout">Cerrar sesión</button>
                 </div>
             </div>
+            <!-- END: User Section -->
+            
         </div>
     </header>
+
     <!-- MAIN CONTENT -->
-    <main class="app-main">
-        <div class="app-container">
+    <main class="main">
+        <div class="container">
             
-            <!-- Profile Information Section -->
+            <!-- START: Profile Information -->
             <section class="profile-section">
                 <div class="section-header">
                     <h2 class="section-title">Perfil</h2>
@@ -258,38 +264,39 @@
 
                     <div class="profile-details">
                         <div class="info-item">
-                            <span class="info-label">Nombre</span>
-                            <span class="info-value">MAXIMILIANO VERA RODRIGUEZ</span>
+                            <span class="info-item__label">Nombre</span>
+                            <span class="info-item__value">MAXIMILIANO VERA RODRIGUEZ</span>
                         </div>
                         <div class="info-item">
-                            <span class="info-label">Email</span>
-                            <span class="info-value">mvera602@unab.edu.co</span>
+                            <span class="info-item__label">Email</span>
+                            <span class="info-item__value">mvera602@unab.edu.co</span>
                         </div>
                         <div class="info-item">
-                            <span class="info-label">T.I.</span>
-                            <span class="info-value">1097496814</span>
+                            <span class="info-item__label">T.I.</span>
+                            <span class="info-item__value">1097496814</span>
                         </div>
                         <div class="info-item">
-                            <span class="info-label">ID Estudiante</span>
-                            <span class="info-value">U00186165</span>
+                            <span class="info-item__label">ID Estudiante</span>
+                            <span class="info-item__value">U00186165</span>
                         </div>
                         <div class="info-item">
-                            <span class="info-label">Educación</span>
-                            <span class="info-value">PREGRADO PROFESIONAL</span>
+                            <span class="info-item__label">Educación</span>
+                            <span class="info-item__value">PREGRADO PROFESIONAL</span>
                         </div>
                         <div class="info-item">
-                            <span class="info-label">Programa</span>
-                            <span class="info-value">Ingeniería de Sistemas</span>
+                            <span class="info-item__label">Programa</span>
+                            <span class="info-item__value">Ingeniería de Sistemas</span>
                         </div>
                         <div class="info-item">
-                            <span class="info-label">Último período matriculado</span>
-                            <span class="info-value">202560</span>
+                            <span class="info-item__label">Último período matriculado</span>
+                            <span class="info-item__value">202560</span>
                         </div>
                     </div>
                 </div>
             </section>
+            <!-- END: Profile Information -->
 
-            <!-- Update Information Section -->
+            <!-- START: Update Information -->
             <section class="profile-section">
                 <div class="section-header">
                     <h2 class="section-title">Actualiza tu información</h2>
@@ -309,24 +316,28 @@
                         <li>&nbsp;&nbsp;• Una minúscula</li>
                     </ul>
 
-                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid var(--orange-button);">
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid var(--color-accent-orange);">
                         <p><strong>La nueva clave afectará:</strong></p>
+                        <ul>
+                            <li>📧 Correo institucional (gmail)</li>
+                            <li>🔶 MiportalU</li>
+                            <li>📘 Aula virtual</li>
+                            <li>📖 Tema</li>
+                            <li>📚 Sibu (Sistema bibliotecas Unab)</li>
+                            <li>📄 Office o365</li>
+                        </ul>
                     </div>
-                    <ul>
-                        <li>📧 Correo institucional (gmail)</li>
-                        <li>🔶 MiportalU</li>
-                        <li>📘 Aula virtual</li>
-                        <li>📖 Tema</li>
-                        <li>📚 Sibu (Sistema bibliotecas Unab)</li>
-                        <li>📄 Office o365</li>
-                    </ul>
                 </div>
             </section>
+            <!-- END: Update Information -->
+
         </div>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="app-footer">
+    <!-- ========================================
+         FOOTER
+         ======================================== -->
+    <footer class="footer">
         <div class="footer-grid">
             <!-- University Info -->
             <div class="footer-section">
@@ -383,4 +394,4 @@
     <!-- JavaScript for mega menu -->
     <script src="assets/js/mega-menu.js"></script>
 </body>
-</html> 
+</html>

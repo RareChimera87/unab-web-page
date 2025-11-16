@@ -1,13 +1,13 @@
 /* ========================================
    APP PAGES STYLESHEET
-   Used for: profile.html and other authenticated pages
+   Used for: main.html and other authenticated pages
    ======================================== */
 
 /* ========================================
    HEADER WITH MEGA MENU
    ======================================== */
 
-.app-header {
+.header {
     background-color: var(--color-gray);
     position: fixed;
     top: 0;
@@ -17,7 +17,6 @@
     box-shadow: var(--shadow-md);
 }
 
-/* Single unified header bar */
 .header-bar {
     padding: 0.75rem 1.5rem;
     display: flex;
@@ -25,32 +24,31 @@
     gap: 2rem;
 }
 
-/* Logo */
 .logo img {
     height: 40px;
     width: auto;
 }
 
 /* ========================================
-   MEGA MENU NAVIGATION (Compact, left-aligned)
+   MEGA MENU NAVIGATION
    ======================================== */
 
-.mega-menu-nav {
+.mega-menu {
     flex: 1;
     display: flex;
     align-items: center;
 }
 
-.mega-menu-content {
+.mega-menu__content {
     display: flex;
     gap: 0.5rem;
 }
 
-.mega-menu-item {
+.mega-menu__item {
     position: relative;
 }
 
-.menu-trigger {
+.mega-menu__trigger {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -66,21 +64,21 @@
     white-space: nowrap;
 }
 
-.menu-trigger:hover {
+.mega-menu__trigger:hover {
     background-color: rgba(61, 77, 106, 0.8);
 }
 
-.menu-trigger svg {
+.mega-menu__trigger svg {
     width: 18px;
     height: 18px;
     flex-shrink: 0;
 }
 
-/* Mega menu dropdown - FULL WIDTH */
-.mega-dropdown {
+/* Mega menu dropdown */
+.mega-menu__dropdown {
     display: none;
     position: fixed;
-    top: 75px; /* Below header */
+    top: 75px;
     left: 0;
     right: 0;
     background-color: var(--color-white);
@@ -91,7 +89,7 @@
     overflow-y: auto;
 }
 
-.mega-dropdown.active {
+.mega-menu__dropdown.active {
     display: block;
 }
 
@@ -126,7 +124,7 @@
     color: var(--color-gray);
     font-size: 0.9rem;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s, padding-left 0.3s;
     display: block;
     padding: 0.25rem 0;
 }
@@ -137,7 +135,7 @@
 }
 
 /* ========================================
-   USER SECTION (Redesigned)
+   USER SECTION
    ======================================== */
 
 .user-section {
@@ -168,13 +166,13 @@
     gap: 0.15rem;
 }
 
-.last-login {
+.user-details__last-login {
     font-size: 0.7rem;
     color: var(--color-text-primary);
     font-weight: 400;
 }
 
-.user-name {
+.user-details__name {
     font-size: 0.9rem;
     color: var(--color-text-primary);
     font-weight: 600;
@@ -185,7 +183,7 @@
     gap: 0.5rem;
 }
 
-.btn-perfil,
+.btn-profile,
 .btn-logout {
     padding: 0.4rem 0.875rem;
     border: none;
@@ -196,7 +194,7 @@
     transition: opacity 0.3s;
 }
 
-.btn-perfil {
+.btn-profile {
     background-color: var(--color-primary);
     color: var(--color-white);
 }
@@ -206,7 +204,7 @@
     color: var(--color-white);
 }
 
-.btn-perfil:hover,
+.btn-profile:hover,
 .btn-logout:hover {
     opacity: 0.85;
 }
@@ -215,13 +213,13 @@
    MAIN CONTENT AREA
    ======================================== */
 
-.app-main {
+.main {
     padding-top: 75px;
     min-height: calc(100vh - 75px);
     background-color: var(--color-gray-light);
 }
 
-.app-container {
+.container {
     max-width: 95%;
     margin: 0 auto;
     padding: var(--space-xl);
@@ -298,18 +296,18 @@
     gap: 0.25rem;
 }
 
-.info-label {
+.info-item__label {
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--color-text-primary);
 }
 
-.info-value {
+.info-item__value {
     font-size: 0.95rem;
     color: var(--color-gray);
 }
 
-/* Update section (password change, etc.) */
+/* Password update box */
 .update-box {
     background-color: var(--color-warning-bg);
     border: 2px solid var(--color-accent-orange);
@@ -343,10 +341,10 @@
 }
 
 /* ========================================
-   FOOTER (Expanded with links)
+   FOOTER
    ======================================== */
 
-.app-footer {
+.footer {
     background-color: var(--color-gray-dark);
     padding: var(--space-xl);
     color: var(--color-white);

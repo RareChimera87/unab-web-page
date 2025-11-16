@@ -1,6 +1,6 @@
 // Mega Menu functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const menuTriggers = document.querySelectorAll('.menu-trigger');
+    const menuTriggers = document.querySelectorAll('.mega-menu__trigger');
     
     menuTriggers.forEach(trigger => {
         trigger.addEventListener('click', function() {
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const dropdown = document.getElementById(menuId);
             
             // Close all other dropdowns
-            document.querySelectorAll('.mega-dropdown').forEach(menu => {
+            document.querySelectorAll('.mega-menu__dropdown').forEach(menu => {
                 if (menu.id !== menuId) {
                     menu.classList.remove('active');
                 }
@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Close dropdown when clicking outside
     document.addEventListener('click', function(event) {
-        if (!event.target.closest('.mega-menu-item')) {
-            document.querySelectorAll('.mega-dropdown').forEach(menu => {
+        if (!event.target.closest('.mega-menu__item')) {
+            document.querySelectorAll('.mega-menu__dropdown').forEach(menu => {
                 menu.classList.remove('active');
             });
         }
