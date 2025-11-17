@@ -1,0 +1,234 @@
+/* ========================================
+   SHARED COMPONENTS STYLESHEET
+   Reusable components used across app and public pages
+   ======================================== */
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+.button {
+    padding: 0.675rem var(--space-lg);
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    display: inline-block;
+    text-align: center;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+.button:active {
+    transform: translateY(1px);
+}
+
+/* Button modifiers */
+.button--primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.button--profile {
+    padding: 0.4rem 0.875rem;
+    font-size: 0.8rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.button--logout {
+    padding: 0.4rem 0.875rem;
+    font-size: 0.8rem;
+    background-color: var(--color-error);
+    color: var(--color-white);
+}
+
+.button--submit {
+    width: 100%;
+    padding: 0.875rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 1rem;
+    margin-top: var(--space-sm);
+}
+
+.button--action {
+    padding: 0.675rem var(--space-lg);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 0.95rem;
+}
+
+/* ========================================
+   FORM COMPONENTS
+   ======================================== */
+
+.form-field {
+    position: relative;
+}
+
+.form-field__input {
+    width: 100%;
+    padding: 0.875rem;
+    background-color: var(--color-gray-medium);
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    color: var(--color-text-primary);
+    transition: outline 0.3s ease;
+}
+
+.form-field__input::placeholder {
+    color: var(--color-white);
+}
+
+.form-field__input:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Password input variant */
+.form-field__input--password {
+    padding-right: 2.5rem;
+}
+
+/* Disabled input */
+.form-field__input:disabled {
+    background-color: var(--color-gray-medium);
+    cursor: not-allowed;
+}
+
+/* Password toggle button */
+.form-field__toggle {
+    position: absolute;
+    right: 0.875rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-white);
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.form-field__toggle:hover {
+    color: var(--color-gray);
+}
+
+/* Form links */
+.form-link {
+    text-align: right;
+}
+
+.form-link a {
+    color: var(--color-gray);
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.form-link a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   HEADER COMPONENTS
+   ======================================== */
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.header__logo-img {
+    height: 40px;
+    width: auto;
+}
+
+/* Text logo variant - for pages without logo image */
+.header__logo-text {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-text-primary);
+}
+
+.header__logo-u {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-accent-orange);
+}
+
+.header__logo-dots {
+    display: flex;
+    gap: 0.25rem;
+    margin-left: 0.25rem;
+}
+
+.header__logo-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-full);
+}
+
+.header__logo-dot--orange { background-color: var(--color-accent-orange); }
+.header__logo-dot--purple { background-color: var(--color-accent-purple); }
+.header__logo-dot--green { background-color: var(--color-primary); }
+.header__logo-dot--blue { background-color: var(--color-secondary); }
+
+/* ========================================
+   FOOTER COMPONENTS
+   ======================================== */
+
+.footer {
+    background-color: var(--color-gray-dark);
+    padding: var(--space-md) var(--space-xl);
+    color: var(--color-white);
+}
+
+.footer__content {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.footer__logo-img {
+    width: 30px;
+    height: 50px;
+}
+
+.footer__logo-svg {
+    width: 30px;
+    height: 40px;
+    color: var(--color-white);
+}
+
+.footer__text {
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.footer__text p {
+    margin: 0;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.footer__copyright {
+    opacity: 0.8;
+    font-size: 0.8rem;
+}

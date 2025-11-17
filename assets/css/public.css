@@ -2,6 +2,7 @@
    PUBLIC PAGES STYLESHEET
    Used for: login.html, register.html
    Pre-authentication pages
+   Import components.css BEFORE this file
    ======================================== */
 
 /* ========================================
@@ -25,47 +26,6 @@
     display: flex;
     align-items: center;
 }
-
-.header__logo {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-}
-
-.header__logo-img {
-    height: 40px;
-    width: auto;
-}
-
-/* Text logo variant - for login2.html */
-.header__logo-text {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--color-text-primary);
-}
-
-.header__logo-u {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-accent-orange);
-}
-
-.header__logo-dots {
-    display: flex;
-    gap: 0.25rem;
-    margin-left: 0.25rem;
-}
-
-.logo-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: var(--radius-full);
-}
-
-.logo-dot--orange { background-color: var(--color-accent-orange); }
-.logo-dot--purple { background-color: var(--color-accent-purple); }
-.logo-dot--green { background-color: var(--color-primary); }
-.logo-dot--blue { background-color: var(--color-secondary); }
 
 /* ========================================
    MAIN CONTENT AREA
@@ -112,86 +72,6 @@
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
-}
-
-/* ========================================
-   FORM COMPONENTS
-   ======================================== */
-
-.form-field {
-    position: relative;
-}
-
-.form-field__input {
-    width: 100%;
-    padding: 0.875rem;
-    background-color: var(--color-gray-medium);
-    border: none;
-    border-radius: var(--radius-md);
-    font-size: 0.95rem;
-    color: var(--color-text-primary);
-    transition: outline 0.3s ease;
-}
-
-.form-field__input::placeholder {
-    color: var(--color-white);
-}
-
-.form-field__input:focus {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
-}
-
-/* Password field with toggle */
-.form-field--password {
-    position: relative;
-}
-
-.form-field__toggle {
-    position: absolute;
-    right: 0.875rem;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--color-white);
-    padding: 0.25rem;
-    display: flex;
-    align-items: center;
-    transition: color 0.3s ease;
-}
-
-.form-field__toggle:hover {
-    color: var(--color-gray);
-}
-
-/* Form links */
-.form-link {
-    text-align: right;
-}
-
-/* Submit button */
-.btn-submit {
-    width: 100%;
-    padding: 0.875rem;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    border: none;
-    border-radius: var(--radius-md);
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-    margin-top: var(--space-sm);
-}
-
-.btn-submit:hover {
-    opacity: 0.9;
-}
-
-.btn-submit:active {
-    transform: translateY(1px);
 }
 
 /* ========================================
@@ -300,55 +180,3 @@
 .external-link--orange { background-color: var(--color-accent-orange); }
 .external-link--blue { background-color: var(--color-secondary); }
 .external-link--purple { background-color: var(--color-accent-purple); }
-
-/* ========================================
-   FOOTER
-   ======================================== */
-
-.footer {
-    background-color: var(--color-gray-dark);
-    padding: var(--space-md) var(--space-xl);
-    color: var(--color-white);
-}
-
-.footer__content {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row; /* Side by side */
-    align-items: center; /* Vertically center both logo and text */
-    gap: var(--space-md);
-}
-
-.footer__logo {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0; /* Prevent logo from shrinking */
-}
-
-.footer__logo-img {
-    width: 30px;
-    height: 30px;
-}
-
-.footer__logo-svg {
-    width: 30px;
-    height: 30px;
-    color: var(--color-white);
-}
-
-.footer__text {
-    font-size: 0.875rem;
-    line-height: 1.4;
-    text-align: left; /* Align text to the left */
-}
-
-.footer__text p {
-    margin: 0;
-    display: block; /* Ensure each paragraph is on its own line */
-    margin-bottom: 0.25rem;
-}
-
-.footer__copyright {
-    opacity: 0.8;
-    font-size: 0.8rem;
-}

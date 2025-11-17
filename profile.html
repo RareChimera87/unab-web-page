@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/app.css">
 </head>
 <body>
     <!-- HEADER -->
     <header class="header">
-        <div class="header-bar">
+        <div class="header__bar">
             <!-- Logo -->
-            <div class="logo">
-                <img src="assets/images/LogoMiPortalU-acc.png" alt="MiPortal U Logo">
+            <div class="header__logo">
+                <img src="assets/images/LogoMiPortalU-acc.png" alt="MiPortal U Logo" class="header__logo-img">
             </div>
     
             <!-- START: Mega Menu -->
@@ -230,16 +231,16 @@
     
             <!-- START: User Section -->
             <div class="user-section">
-                <div class="user-profile">
-                    <img src="assets/images/user-avatar-ai.jpg" alt="User Avatar" class="user-avatar">
-                    <div class="user-details">
-                        <span class="user-details__last-login">Último ingreso: 17-Nov-2025 08:37:55</span>
-                        <span class="user-details__name">Jhon P. Perez Ardila</span>
+                <div class="user-section__profile">
+                    <img src="assets/images/user-avatar-ai.jpg" alt="" class="user-section__avatar">
+                    <div class="user-section__details">
+                        <span class="user-section__last-login">Último ingreso: 17-Nov-2025 08:37:55</span>
+                        <span class="user-section__name">Jhon P. Perez Ardila</span>
                     </div>
                 </div>
-                <div class="user-actions">
-                    <button class="btn-profile">Perfil</button>
-                    <button class="btn-logout">Cerrar sesión</button>
+                <div class="user-section__actions">
+                    <button class="button button--profile">Perfil</button>
+                    <button class="button button--logout">Cerrar sesión</button>
                 </div>
             </div>
             <!-- END: User Section -->
@@ -300,14 +301,14 @@
             <section class="profile-section">
                 <div class="section-header">
                     <h2 class="section-title">Actualiza tu información</h2>
-                    <button class="btn-action">Cambiar</button>
+                    <button class="button button--action">Cambiar</button>
                 </div>
 
                 <div class="update-box">
                     <h3>Cambia tu contraseña de usuario Unab</h3>
-                    <input type="password" class="password-input" placeholder="********" disabled>
+                    <input type="password" class="form-field__input" placeholder="********" disabled>
                     
-                    <ul class="requirements-list">
+                    <ul class="password-requirements">
                         <li>- Mínimo 8 caracteres</li>
                         <li>- No usar tu nombre ni apellido en la clave</li>
                         <li><strong>Debe contener al menos:</strong></li>
@@ -334,18 +335,16 @@
         </div>
     </main>
 
-    <!-- ========================================
-         FOOTER
-         ======================================== -->
-    <footer class="footer">
-        <div class="footer-grid">
+    <!-- FOOTER -->
+    <footer class="footer footer--app">
+        <div class="footer__grid">
             <!-- University Info -->
-            <div class="footer-section">
-                <div class="footer-logo-section">
-                    <div class="footer-logo">
-                        <img src="assets/images/logo-unab-vert.png" alt="UNAB Logo">
+            <div class="footer__section">
+                <div class="footer__logo-section">
+                    <div class="footer__logo">
+                        <img src="assets/images/logo-unab-vert.png" alt="UNAB Logo" class="footer__logo-img">
                     </div>
-                    <div class="footer-info">
+                    <div class="footer__info">
                         <p>Universidad Autónoma de Bucaramanga</p>
                         <p>Avenida 42 No. 48 - 11 | PBX (7)6436111</p>
                         <p>Bucaramanga - Colombia</p>
@@ -356,7 +355,7 @@
             </div>
 
             <!-- Nuestros medios -->
-            <div class="footer-section">
+            <div class="footer__section">
                 <h4>Nuestros medios</h4>
                 <ul>
                     <li><a href="#">Unab TV</a></li>
@@ -367,7 +366,7 @@
             </div>
 
             <!-- Sitios UNAB -->
-            <div class="footer-section">
+            <div class="footer__section">
                 <h4>Sitios UNAB</h4>
                 <ul>
                     <li><a href="#">Unab</a></li>
@@ -378,7 +377,7 @@
             </div>
 
             <!-- Redes Sociales -->
-            <div class="footer-section">
+            <div class="footer__section">
                 <h4>Redes Sociales</h4>
                 <ul>
                     <li><a href="#">📘 Facebook</a></li>

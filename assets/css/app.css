@@ -1,6 +1,7 @@
 /* ========================================
    APP PAGES STYLESHEET
    Used for: main.html and other authenticated pages
+   Import components.css BEFORE this file
    ======================================== */
 
 /* ========================================
@@ -17,16 +18,11 @@
     box-shadow: var(--shadow-md);
 }
 
-.header-bar {
+.header__bar {
     padding: 0.75rem 1.5rem;
     display: flex;
     align-items: center;
     gap: 2rem;
-}
-
-.logo img {
-    height: 40px;
-    width: auto;
 }
 
 /* ========================================
@@ -145,13 +141,13 @@
     margin-left: auto;
 }
 
-.user-profile {
+.user-section__profile {
     display: flex;
     align-items: center;
     gap: var(--space-md);
 }
 
-.user-avatar {
+.user-section__avatar {
     width: 50px;
     height: 50px;
     border-radius: var(--radius-full);
@@ -160,53 +156,27 @@
     flex-shrink: 0;
 }
 
-.user-details {
+.user-section__details {
     display: flex;
     flex-direction: column;
     gap: 0.15rem;
 }
 
-.user-details__last-login {
+.user-section__last-login {
     font-size: 0.7rem;
     color: var(--color-text-primary);
     font-weight: 400;
 }
 
-.user-details__name {
+.user-section__name {
     font-size: 0.9rem;
     color: var(--color-text-primary);
     font-weight: 600;
 }
 
-.user-actions {
+.user-section__actions {
     display: flex;
     gap: 0.5rem;
-}
-
-.btn-profile,
-.btn-logout {
-    padding: 0.4rem 0.875rem;
-    border: none;
-    border-radius: var(--radius-sm);
-    font-size: 0.8rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: opacity 0.3s;
-}
-
-.btn-profile {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-}
-
-.btn-logout {
-    background-color: var(--color-error);
-    color: var(--color-white);
-}
-
-.btn-profile:hover,
-.btn-logout:hover {
-    opacity: 0.85;
 }
 
 /* ========================================
@@ -250,22 +220,6 @@
     font-size: 1.75rem;
     font-weight: 400;
     color: var(--color-primary);
-}
-
-.btn-action {
-    padding: 0.675rem var(--space-lg);
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    border: none;
-    border-radius: var(--radius-md);
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: opacity 0.3s;
-}
-
-.btn-action:hover {
-    opacity: 0.9;
 }
 
 /* Profile info grid */
@@ -322,16 +276,7 @@
     margin-bottom: var(--space-md);
 }
 
-.password-input {
-    width: 250px;
-    padding: 0.675rem;
-    background-color: var(--color-gray-medium);
-    border: none;
-    border-radius: var(--radius-sm);
-    margin-bottom: var(--space-md);
-}
-
-.requirements-list {
+.password-requirements {
     list-style: none;
     font-size: 0.85rem;
     color: var(--color-text-primary);
@@ -341,41 +286,34 @@
 }
 
 /* ========================================
-   FOOTER
+   FOOTER (APP VERSION - EXTENDED GRID)
    ======================================== */
 
-.footer {
-    background-color: var(--color-gray-dark);
-    padding: var(--space-xl);
-    color: var(--color-white);
+.footer--app {
+    padding: var(--space-md);
 }
 
-.footer-grid {
+.footer__grid {
     max-width: 1400px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: var(--space-xl);
+    gap: var(--space-xs);
 }
 
-.footer-section h4 {
+.footer__section h4 {
     font-size: 1rem;
     font-weight: 600;
     color: var(--color-white);
-    margin-bottom: var(--space-md);
 }
 
-.footer-section ul {
+.footer__section ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.footer-section li {
-    margin-bottom: 0.5rem;
-}
-
-.footer-section a {
+.footer__section a {
     color: var(--color-white);
     font-size: 0.85rem;
     text-decoration: none;
@@ -383,23 +321,18 @@
     transition: opacity 0.3s;
 }
 
-.footer-section a:hover {
+.footer__section a:hover {
     opacity: 1;
     text-decoration: underline;
 }
 
-.footer-logo-section {
+.footer__logo-section {
     display: flex;
     align-items: flex-start;
     gap: var(--space-md);
 }
 
-.footer-logo img {
-    width: 60px;
-    height: auto;
-}
-
-.footer-info p {
+.footer__info p {
     font-size: 0.85rem;
     line-height: 1.6;
     opacity: 0.9;
