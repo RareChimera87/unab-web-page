@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horas Libres - MiPortal U</title>
+    <link rel="stylesheet" href="assets/css/horas_libres.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="header-content">
+        <div class="logo">
+          <span class="logo-text">MiPortal</span>
+          <span class="logo-u">U</span>
+          <div class="logo-dots">
+            <span class="dot dot-blue"></span>
+            <span class="dot dot-green"></span>
+            <span class="dot dot-orange"></span>
+            <span class="dot dot-purple"></span>
+          </div>
+        </div>
+        <div class="header-user">
+          <div class="user-info">
+            <div class="user-name">Estudiante UNAB</div>
+            <div class="user-role">Ingeniería de Sistemas</div>
+          </div>
+          <div class="user-avatar">EU</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="horas-container">
+        <div class="page-header">
+          <h1 class="page-title">Horas Libres</h1>
+          <p class="page-subtitle">Registro de actividades extracurriculares</p>
+        </div>
+
+        <!-- Contador de Horas -->
+        <div class="hours-counter">
+          <div class="counter-content">
+            <div class="counter-icon">
+              <svg
+                width="48"
+                height="48"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="24" cy="24" r="20"></circle>
+                <polyline points="24 12 24 24 32 28"></polyline>
+              </svg>
+            </div>
+            <div class="counter-info">
+              <div class="counter-label">Total de Horas Acumuladas</div>
+              <div class="counter-value">
+                <span id="totalHours">24</span>
+                <span class="counter-unit">horas</span>
+              </div>
+              <div class="counter-progress">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 48%"></div>
+                </div>
+                <div class="progress-text">48% del objetivo (50 horas)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botón Agregar Actividad -->
+        <div class="add-activity-section">
+          <button class="btn-add-activity" onclick="toggleForm()">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            Agregar Nueva Actividad
+          </button>
+        </div>
+
+        <!-- Formulario (oculto por defecto) -->
+        <div class="activity-form" id="activityForm" style="display: none">
+          <h3 class="form-title">Nueva Actividad</h3>
+          <form onsubmit="addActivity(event)">
+            <div class="form-group">
+              <label>Nombre de la Actividad</label>
+              <input
+                type="text"
+                id="activityName"
+                required
+                placeholder="Ej: Voluntariado comunitario"
+              />
+            </div>
+            <div class="form-group">
+              <label>Cantidad de Horas</label>
+              <input
+                type="number"
+                id="activityHours"
+                required
+                min="1"
+                placeholder="Ej: 5"
+              />
+            </div>
+            <div class="form-group">
+              <label>Fecha</label>
+              <input type="date" id="activityDate" required />
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn-cancel" onclick="toggleForm()">
+                Cancelar
+              </button>
+              <button type="submit" class="btn-submit">Guardar</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Tabla de Actividades -->
+        <div class="activities-table-container">
+          <table class="activities-table">
+            <thead>
+              <tr>
+                <th>Nombre de la Actividad</th>
+                <th>Cantidad de Horas</th>
+                <th>Fecha</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="activitiesBody">
+              <tr>
+                <td>Voluntariado en biblioteca</td>
+                <td>8 horas</td>
+                <td>15/11/2024</td>
+                <td>
+                  <button class="btn-action btn-delete" title="Eliminar">
+                    <svg
+                      width="16"
+                      height="16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="3 6 5 6 21 6"></polyline>
+                      <path
+                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                      ></path>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>Taller de robótica</td>
+                <td>6 horas</td>
+                <td>10/11/2024</td>
+                <td>
+                  <button class="btn-action btn-delete" title="Eliminar">
+                    <svg
+                      width="16"
+                      height="16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="3 6 5 6 21 6"></polyline>
+                      <path
+                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                      ></path>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>Conferencia de inteligencia artificial</td>
+                <td>4 horas</td>
+                <td>05/11/2024</td>
+                <td>
+                  <button class="btn-action btn-delete" title="Eliminar">
+                    <svg
+                      width="16"
+                      height="16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="3 6 5 6 21 6"></polyline>
+                      <path
+                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                      ></path>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>Semana cultural universitaria</td>
+                <td>6 horas</td>
+                <td>28/10/2024</td>
+                <td>
+                  <button class="btn-action btn-delete" title="Eliminar">
+                    <svg
+                      width="16"
+                      height="16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="3 6 5 6 21 6"></polyline>
+                      <path
+                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                      ></path>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"
+            ></path>
+            <path d="M9 22V12H15V22"></path>
+          </svg>
+        </div>
+        <div class="footer-text">
+          <p>Universidad Autónoma de Bucaramanga</p>
+          <p class="footer-copyright">© Todos los derechos reservados</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleForm() {
+        const form = document.getElementById("activityForm");
+        form.style.display = form.style.display === "none" ? "block" : "none";
+      }
+
+      function addActivity(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("activityName").value;
+        const hours = document.getElementById("activityHours").value;
+        const date = document.getElementById("activityDate").value;
+
+        // Formatear fecha
+        const dateObj = new Date(date + "T00:00:00");
+        const formattedDate = dateObj.toLocaleDateString("es-ES");
+
+        // Agregar fila a la tabla
+        const tbody = document.getElementById("activitiesBody");
+        const newRow = tbody.insertRow(0);
+
+        newRow.innerHTML = `
+                <td>${name}</td>
+                <td>${hours} horas</td>
+                <td>${formattedDate}</td>
+                <td>
+                    <button class="btn-action btn-delete" onclick="deleteActivity(this)" title="Eliminar">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        </svg>
+                    </button>
+                </td>
+            `;
+
+        // Actualizar contador
+        const totalHours = document.getElementById("totalHours");
+        const newTotal = parseInt(totalHours.textContent) + parseInt(hours);
+        totalHours.textContent = newTotal;
+
+        // Actualizar barra de progreso
+        const progressFill = document.querySelector(".progress-fill");
+        const progressText = document.querySelector(".progress-text");
+        const percentage = Math.min((newTotal / 50) * 100, 100);
+        progressFill.style.width = percentage + "%";
+        progressText.textContent = `${Math.round(
+          percentage
+        )}% del objetivo (50 horas)`;
+
+        // Limpiar formulario y ocultarlo
+        event.target.reset();
+        toggleForm();
+      }
+
+      function deleteActivity(button) {
+        if (confirm("¿Estás seguro de eliminar esta actividad?")) {
+          const row = button.closest("tr");
+          const hoursText = row.cells[1].textContent;
+          const hours = parseInt(hoursText);
+
+          // Actualizar contador
+          const totalHours = document.getElementById("totalHours");
+          const newTotal = Math.max(
+            0,
+            parseInt(totalHours.textContent) - hours
+          );
+          totalHours.textContent = newTotal;
+
+          // Actualizar barra de progreso
+          const progressFill = document.querySelector(".progress-fill");
+          const progressText = document.querySelector(".progress-text");
+          const percentage = Math.min((newTotal / 50) * 100, 100);
+          progressFill.style.width = percentage + "%";
+          progressText.textContent = `${Math.round(
+            percentage
+          )}% del objetivo (50 horas)`;
+
+          // Eliminar fila
+          row.remove();
+        }
+      }
+    </script>
+  </body>
+</html>

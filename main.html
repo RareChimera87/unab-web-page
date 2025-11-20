@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiPortal U - UNAB</title>
+    <link rel="stylesheet" href="assets/css/index.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="header-content">
+        <div class="logo">
+          <span class="logo-text">MiPortal</span>
+          <span class="logo-u">U</span>
+          <div class="logo-dots">
+            <span class="dot dot-blue"></span>
+            <span class="dot dot-green"></span>
+            <span class="dot dot-orange"></span>
+            <span class="dot dot-purple"></span>
+          </div>
+        </div>
+        <div class="header-user">
+          <div class="user-info">
+            <div class="user-name">Estudiante UNAB</div>
+            <div class="user-role">Ingeniería de Sistemas</div>
+          </div>
+          <div class="user-avatar">EU</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <!-- Welcome Section -->
+      <section class="welcome-section">
+        <div class="welcome-container">
+          <h1 class="welcome-title">¡Bienvenido a MiPortal U!</h1>
+          <p class="welcome-subtitle">
+            Tu centro de gestión académica y universitaria
+          </p>
+        </div>
+      </section>
+
+      <!-- Services Grid -->
+      <section class="services-section">
+        <div class="services-container">
+          <h2 class="section-title">Servicios Principales</h2>
+
+          <div class="services-grid">
+            <!-- Dashboard -->
+            <a href="dashboard.html" class="service-card orange">
+              <div class="service-icon">
+                <svg
+                  width="48"
+                  height="48"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+              </div>
+              <h3 class="service-title">Dashboard</h3>
+              <p class="service-description">
+                Panel de control con estadísticas y métricas académicas
+              </p>
+            </a>
+
+            <!-- Horario -->
+            <a href="horario.html" class="service-card blue">
+              <div class="service-icon">
+                <svg
+                  width="48"
+                  height="48"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+              <h3 class="service-title">Mi Horario</h3>
+              <p class="service-description">
+                Consulta tu horario de clases del semestre actual
+              </p>
+            </a>
+
+            <!-- Horas Libres -->
+            <a href="horas_libres.html" class="service-card green">
+              <div class="service-icon">
+                <svg
+                  width="48"
+                  height="48"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <h3 class="service-title">Horas Libres</h3>
+              <p class="service-description">
+                Registro y seguimiento de actividades extracurriculares
+              </p>
+            </a>
+
+            <!-- Noticias -->
+            <a href="noticias.html" class="service-card purple">
+              <div class="service-icon">
+                <svg
+                  width="48"
+                  height="48"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2z"
+                  ></path>
+                  <path d="M4 22h16a2 2 0 0 0 2-2v-8"></path>
+                  <line x1="8" y1="6" x2="14" y2="6"></line>
+                  <line x1="8" y1="10" x2="16" y2="10"></line>
+                  <line x1="8" y1="14" x2="16" y2="14"></line>
+                </svg>
+              </div>
+              <h3 class="service-title">Noticias</h3>
+              <p class="service-description">
+                Mantente informado sobre eventos y novedades universitarias
+              </p>
+            </a>
+
+            <!-- Calificaciones -->
+            <a href="#" class="service-card orange">
+              <div class="service-icon">
+                <svg
+                  width="48"
+                  height="48"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                  ></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <h3 class="service-title">Calificaciones</h3>
+              <p class="service-description">
+                Consulta tus notas y rendimiento académico
+              </p>
+            </a>
+
+            <!-- Biblioteca -->
+            <a href="#" class="service-card blue">
+              <div class="service-icon">
+                <svg
+                  width="48"
+                  height="48"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+              </div>
+              <h3 class="service-title">Biblioteca</h3>
+              <p class="service-description">
+                Accede al catálogo digital y recursos bibliográficos
+              </p>
+            </a>
+
+            <!-- Pagos -->
+            <a href="#" class="service-card green">
+              <div class="service-icon">
+                <svg
+                  width="48"
+                  height="48"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                  <line x1="1" y1="10" x2="23" y2="10"></line>
+                </svg>
+              </div>
+              <h3 class="service-title">Pagos</h3>
+              <p class="service-description">
+                Gestiona tus pagos y consulta estados de cuenta
+              </p>
+            </a>
+
+            <!-- Correo -->
+            <a href="#" class="service-card purple">
+              <div class="service-icon">
+                <svg
+                  width="48"
+                  height="48"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <h3 class="service-title">Correo Institucional</h3>
+              <p class="service-description">
+                Accede a tu correo universitario
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Links -->
+      <section class="quick-links-section">
+        <div class="quick-links-container">
+          <h2 class="section-title">Accesos Rápidos</h2>
+
+          <div class="quick-links-grid">
+            <a href="#" class="quick-link">
+              <svg
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+              <span>Ayuda y Soporte</span>
+            </a>
+
+            <a href="#" class="quick-link">
+              <svg
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span>Mi Perfil</span>
+            </a>
+
+            <a href="#" class="quick-link">
+              <svg
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                  d="M12 1v6m0 6v6M5.6 5.6l4.2 4.2m4.2 4.2l4.2 4.2M1 12h6m6 0h6M5.6 18.4l4.2-4.2m4.2-4.2l4.2-4.2"
+                ></path>
+              </svg>
+              <span>Configuración</span>
+            </a>
+
+            <a href="#" class="quick-link">
+              <svg
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+              </svg>
+              <span>Cerrar Sesión</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"
+            ></path>
+            <path d="M9 22V12H15V22"></path>
+          </svg>
+        </div>
+        <div class="footer-text">
+          <p>Universidad Autónoma de Bucaramanga</p>
+          <p class="footer-copyright">© Todos los derechos reservados</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
