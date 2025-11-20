@@ -4,29 +4,328 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MiPortal U - UNAB</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/app.css" />
     <link rel="stylesheet" href="assets/css/index.css" />
   </head>
   <body>
-    <!-- HEADER -->
-    <header class="site-header">
-      <div class="header-content">
-        <div class="logo">
-          <span class="logo-text">MiPortal</span>
-          <span class="logo-u">U</span>
-          <div class="logo-dots">
-            <span class="dot dot-blue"></span>
-            <span class="dot dot-green"></span>
-            <span class="dot dot-orange"></span>
-            <span class="dot dot-purple"></span>
+    <!-- HEADER CON MEGA MENU -->
+    <header class="header">
+      <div class="header__bar">
+        <!-- Logo -->
+        <div class="header__logo">
+          <img
+            src="assets/images/LogoMiPortalU-acc.png"
+            alt="MiPortal U Logo"
+            class="header__logo-img"
+          />
+        </div>
+
+        <!-- START: Mega Menu -->
+        <nav class="mega-menu">
+          <div class="mega-menu__content">
+            <!-- Servicios Electrónicos -->
+            <div class="mega-menu__item">
+              <button
+                class="mega-menu__trigger"
+                data-menu="servicios-electronicos"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L2 7L12 12L22 7L12 2Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M2 17L12 22L22 17"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M2 12L12 17L22 12"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+                <span>Servicios Electrónicos</span>
+              </button>
+              <div class="mega-menu__dropdown" id="servicios-electronicos">
+                <div class="dropdown-grid">
+                  <div class="dropdown-section">
+                    <h4>Comunicación</h4>
+                    <ul>
+                      <li><a href="#">Correo Electrónico</a></li>
+                      <li><a href="#">Office 365</a></li>
+                      <li><a href="#">Teams</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-section">
+                    <h4>Académico</h4>
+                    <ul>
+                      <li><a href="#">Canvas</a></li>
+                      <li><a href="#">TEMA</a></li>
+                      <li><a href="#">Cosmos</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-section">
+                    <h4>Biblioteca</h4>
+                    <ul>
+                      <li><a href="#">SIBU</a></li>
+                      <li><a href="#">Recursos Digitales</a></li>
+                      <li><a href="#">Revistas Académicas</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Servicios para Estudiantes -->
+            <div class="mega-menu__item">
+              <button
+                class="mega-menu__trigger"
+                data-menu="servicios-estudiantes"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="12"
+                    cy="7"
+                    r="4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+                <span>Servicios para Estudiantes</span>
+              </button>
+              <div class="mega-menu__dropdown" id="servicios-estudiantes">
+                <div class="dropdown-grid">
+                  <div class="dropdown-section">
+                    <h4>Inscripción de cursos</h4>
+                    <ul>
+                      <li><a href="#">Selección de Cursos Menores</a></li>
+                      <li><a href="#">Turnos</a></li>
+                      <li><a href="#">Inscripción de Informática</a></li>
+                      <li><a href="#">Proyección de Cursos</a></li>
+                      <li><a href="#">Cursos Inscritos</a></li>
+                      <li><a href="#">Descargar Certificado de Notas</a></li>
+                      <li><a href="#">Formulario Practicantes</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-section">
+                    <h4>Información del Programa</h4>
+                    <ul>
+                      <li><a href="#">Profesores</a></li>
+                      <li><a href="#">Cronogramas Académicos</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-section">
+                    <h4>Trámites Académicos</h4>
+                    <ul>
+                      <li><a href="#">Actualización de EPS</a></li>
+                      <li><a href="#">Reconocimiento de cursos</a></li>
+                      <li><a href="#">Solicitud de Certificados</a></li>
+                      <li><a href="#">Inscripción a elecciones</a></li>
+                      <li><a href="#">Solicitud Insignia Digital</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-section">
+                    <h4>Trámites Financieros</h4>
+                    <ul>
+                      <li><a href="#">Apoyo Financiero Directo</a></li>
+                      <li><a href="#">Apoyo Financiero Externo</a></li>
+                      <li>
+                        <a href="#">Cronograma fechas de pago Primer Ingreso</a>
+                      </li>
+                      <li>
+                        <a href="#">Cronograma fechas de pago Continuos</a>
+                      </li>
+                      <li><a href="#">Solicitud Becas Fondos</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Apoyo al Estudiante -->
+            <div class="mega-menu__item">
+              <button class="mega-menu__trigger" data-menu="apoyo-estudiante">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M9.09 9C9.3251 8.33167 9.78915 7.76811 10.4 7.40913C11.0108 7.05016 11.7289 6.91894 12.4272 7.03871C13.1255 7.15849 13.7588 7.52152 14.2151 8.06353C14.6713 8.60553 14.9211 9.29152 14.92 10C14.92 12 11.92 13 11.92 13"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M12 17H12.01"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <span>Apoyo al Estudiante</span>
+              </button>
+              <div class="mega-menu__dropdown" id="apoyo-estudiante">
+                <div class="dropdown-grid">
+                  <div class="dropdown-section">
+                    <h4>Pago de Matrícula</h4>
+                    <ul>
+                      <li><a href="#">Cronograma Primer Ingreso</a></li>
+                      <li><a href="#">Cronograma Continuos</a></li>
+                      <li><a href="#">Cupones</a></li>
+                      <li><a href="#">Devoluciones</a></li>
+                      <li><a href="#">PQR</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-section">
+                    <h4>Servicios Académicos</h4>
+                    <ul>
+                      <li><a href="#">Certificados</a></li>
+                      <li><a href="#">Multa Biblioteca</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-section">
+                    <h4>Grados</h4>
+                    <ul>
+                      <li><a href="#">Solicitud de Grados</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Información Administrativa -->
+            <div class="mega-menu__item">
+              <button
+                class="mega-menu__trigger"
+                data-menu="info-administrativa"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <polyline
+                    points="14 2 14 8 20 8"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+                <span>Información Administrativa</span>
+              </button>
+              <div class="mega-menu__dropdown" id="info-administrativa">
+                <div class="dropdown-grid">
+                  <div class="dropdown-section">
+                    <h4>Biblioteca</h4>
+                    <ul>
+                      <li><a href="#">Web de Biblioteca</a></li>
+                      <li><a href="#">SIBU</a></li>
+                      <li><a href="#">Recursos digitales</a></li>
+                      <li><a href="#">Revistas Académicas</a></li>
+                      <li><a href="#">Repositorio Institucional UNAB</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-section">
+                    <h4>e-Learning</h4>
+                    <ul>
+                      <li><a href="#">Tema Pregrado</a></li>
+                      <li><a href="#">Tema Posgrado</a></li>
+                      <li><a href="#">Canvas</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-section">
+                    <h4>Reserva de Equipos</h4>
+                    <ul>
+                      <li><a href="#">Jardín</a></li>
+                      <li><a href="#">Bosque</a></li>
+                      <li><a href="#">CSU</a></li>
+                      <li><a href="#">Caldas</a></li>
+                      <li><a href="#">Estación 42</a></li>
+                      <li><a href="#">La Casona</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-section">
+                    <h4>Reserva de Espacios</h4>
+                    <ul>
+                      <li><a href="#">Disponibilidad de Aulas</a></li>
+                      <li><a href="#">Espacios UNAB</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-section">
+                    <h4>Sistemas</h4>
+                    <ul>
+                      <li><a href="#">Cosmos</a></li>
+                      <li><a href="#">Sistema Apolo</a></li>
+                      <li><a href="#">CLIC</a></li>
+                      <li><a href="#">Bienestar en Línea</a></li>
+                      <li><a href="#">Agenda tu cita virtual</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-section">
+                    <h4>Soporte</h4>
+                    <ul>
+                      <li><a href="#">CLIC</a></li>
+                      <li><a href="#">Bienestar en Línea</a></li>
+                      <li><a href="#">Agenda tu cita virtual</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- END: Mega Menu -->
+
+        <!-- START: User Section -->
+        <div class="user-section">
+          <div class="user-section__profile">
+            <img
+              src="assets/images/user-avatar-ai.jpg"
+              alt=""
+              class="user-section__avatar"
+            />
+            <div class="user-section__details">
+              <span class="user-section__last-login"
+                >Último ingreso: 17-Nov-2025 08:37:55</span
+              >
+              <span class="user-section__name">Jhon P. Perez Ardila</span>
+            </div>
+          </div>
+          <div class="user-section__actions">
+            <button class="button button--profile">Perfil</button>
+            <button class="button button--logout">Cerrar sesión</button>
           </div>
         </div>
-        <div class="header-user">
-          <div class="user-info">
-            <div class="user-name">Estudiante UNAB</div>
-            <div class="user-role">Ingeniería de Sistemas</div>
-          </div>
-          <div class="user-avatar">EU</div>
-        </div>
+        <!-- END: User Section -->
       </div>
     </header>
 
@@ -146,7 +445,7 @@
             </a>
 
             <!-- Calificaciones -->
-            <a href="#" class="service-card orange">
+            <a href="notas.html" class="service-card orange">
               <div class="service-icon">
                 <svg
                   width="48"
@@ -264,7 +563,7 @@
               <span>Ayuda y Soporte</span>
             </a>
 
-            <a href="#" class="quick-link">
+            <a href="profile.html" class="quick-link">
               <svg
                 width="24"
                 height="24"
@@ -294,7 +593,7 @@
               <span>Configuración</span>
             </a>
 
-            <a href="#" class="quick-link">
+            <a href="login.html" class="quick-link">
               <svg
                 width="24"
                 height="24"
@@ -314,28 +613,65 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <svg
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path
-              d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"
-            ></path>
-            <path d="M9 22V12H15V22"></path>
-          </svg>
+    <footer class="footer footer--app">
+      <div class="footer__grid">
+        <!-- University Info -->
+        <div class="footer__section">
+          <div class="footer__logo-section">
+            <div class="footer__logo">
+              <img
+                src="assets/images/logo-unab-vert.png"
+                alt="UNAB Logo"
+                class="footer__logo-img"
+              />
+            </div>
+            <div class="footer__info">
+              <p>Universidad Autónoma de Bucaramanga</p>
+              <p>Avenida 42 No. 48 - 11 | PBX (7)6436111</p>
+              <p>Bucaramanga - Colombia</p>
+              <p>NIT: 890.200.499-9</p>
+              <p>© Todos los derechos reservados</p>
+            </div>
+          </div>
         </div>
-        <div class="footer-text">
-          <p>Universidad Autónoma de Bucaramanga</p>
-          <p class="footer-copyright">© Todos los derechos reservados</p>
+
+        <!-- Nuestros medios -->
+        <div class="footer__section">
+          <h4>Nuestros medios</h4>
+          <ul>
+            <li><a href="#">Unab TV</a></li>
+            <li><a href="#">Periódico 15</a></li>
+            <li><a href="#">Soy autónomo TV</a></li>
+            <li><a href="#">UNAB Radio</a></li>
+          </ul>
+        </div>
+
+        <!-- Sitios UNAB -->
+        <div class="footer__section">
+          <h4>Sitios UNAB</h4>
+          <ul>
+            <li><a href="#">Unab</a></li>
+            <li><a href="#">Instituto Caldas</a></li>
+            <li><a href="#">Unab Virtual</a></li>
+            <li><a href="#">Ulibro</a></li>
+          </ul>
+        </div>
+
+        <!-- Redes Sociales -->
+        <div class="footer__section">
+          <h4>Redes Sociales</h4>
+          <ul>
+            <li><a href="#">📘 Facebook</a></li>
+            <li><a href="#">🐦 X (Twitter)</a></li>
+            <li><a href="#">📷 Instagram</a></li>
+            <li><a href="#">📺 YouTube</a></li>
+            <li><a href="#">💼 LinkedIn</a></li>
+          </ul>
         </div>
       </div>
     </footer>
+
+    <!-- JavaScript for mega menu -->
+    <script src="assets/js/mega-menu.js"></script>
   </body>
 </html>

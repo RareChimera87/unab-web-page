@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calificaciones - MiPortal U</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/notas.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="header-content">
+        <div class="logo">
+          <span class="logo-text">MiPortal</span>
+          <span class="logo-u">U</span>
+          <div class="logo-dots">
+            <span class="dot dot-blue"></span>
+            <span class="dot dot-green"></span>
+            <span class="dot dot-orange"></span>
+            <span class="dot dot-purple"></span>
+          </div>
+        </div>
+        <div class="header-user">
+          <div class="user-info">
+            <div class="user-name">Estudiante UNAB</div>
+            <div class="user-role">Ingeniería de Sistemas</div>
+          </div>
+          <div class="user-avatar">EU</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="notas-container">
+        <div class="page-header">
+          <h1 class="page-title">Calificaciones</h1>
+          <p class="page-subtitle">
+            Consulta tus notas y rendimiento académico
+          </p>
+        </div>
+
+        <!-- Resumen de Rendimiento -->
+        <div class="performance-summary">
+          <div class="summary-card blue">
+            <div class="summary-icon">
+              <svg
+                width="32"
+                height="32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <div class="summary-content">
+              <div class="summary-label">Promedio General</div>
+              <div class="summary-value">4.2</div>
+              <div class="summary-detail">De 5.0</div>
+            </div>
+          </div>
+
+          <div class="summary-card green">
+            <div class="summary-icon">
+              <svg
+                width="32"
+                height="32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div class="summary-content">
+              <div class="summary-label">Cursos Aprobados</div>
+              <div class="summary-value">5</div>
+              <div class="summary-detail">De 6 cursando</div>
+            </div>
+          </div>
+
+          <div class="summary-card orange">
+            <div class="summary-icon">
+              <svg
+                width="32"
+                height="32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="summary-content">
+              <div class="summary-label">Créditos Cursados</div>
+              <div class="summary-value">18</div>
+              <div class="summary-detail">Este semestre</div>
+            </div>
+          </div>
+
+          <div class="summary-card purple">
+            <div class="summary-icon">
+              <svg
+                width="32"
+                height="32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+            </div>
+            <div class="summary-content">
+              <div class="summary-label">Semestre</div>
+              <div class="summary-value">4º</div>
+              <div class="summary-detail">2024-2</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filtros de Período -->
+        <div class="period-filters">
+          <button class="period-btn active" onclick="filterPeriod('actual')">
+            Período Actual
+          </button>
+          <button class="period-btn" onclick="filterPeriod('2024-1')">
+            2024-1
+          </button>
+          <button class="period-btn" onclick="filterPeriod('2023-2')">
+            2023-2
+          </button>
+          <button class="period-btn" onclick="filterPeriod('historico')">
+            Histórico
+          </button>
+        </div>
+
+        <!-- Tabla de Notas por Curso -->
+        <div class="grades-section">
+          <h2 class="section-title">Notas del Período 2024-2</h2>
+
+          <!-- Curso 1: Matemáticas -->
+          <div class="course-card">
+            <div class="course-header">
+              <div class="course-info">
+                <h3 class="course-name">Matemáticas Avanzadas</h3>
+                <div class="course-details">
+                  <span class="course-code">MAT401</span>
+                  <span class="course-credits">3 créditos</span>
+                  <span class="course-professor">Prof. Carlos Ramírez</span>
+                </div>
+              </div>
+              <div class="course-final">
+                <div class="final-label">Nota Final</div>
+                <div class="final-grade grade-high">4.5</div>
+              </div>
+            </div>
+            <div class="course-grades">
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Parcial 1</span>
+                  <span class="grade-weight">30%</span>
+                </div>
+                <div class="grade-score grade-high">4.2</div>
+              </div>
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Parcial 2</span>
+                  <span class="grade-weight">30%</span>
+                </div>
+                <div class="grade-score grade-high">4.8</div>
+              </div>
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Talleres</span>
+                  <span class="grade-weight">20%</span>
+                </div>
+                <div class="grade-score grade-high">4.5</div>
+              </div>
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Examen Final</span>
+                  <span class="grade-weight">20%</span>
+                </div>
+                <div class="grade-score grade-high">4.6</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Curso 2: Programación -->
+          <div class="course-card">
+            <div class="course-header">
+              <div class="course-info">
+                <h3 class="course-name">Programación Orientada a Objetos</h3>
+                <div class="course-details">
+                  <span class="course-code">PRG302</span>
+                  <span class="course-credits">4 créditos</span>
+                  <span class="course-professor">Prof. María González</span>
+                </div>
+              </div>
+              <div class="course-final">
+                <div class="final-label">Nota Final</div>
+                <div class="final-grade grade-high">4.7</div>
+              </div>
+            </div>
+            <div class="course-grades">
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Proyecto 1</span>
+                  <span class="grade-weight">25%</span>
+                </div>
+                <div class="grade-score grade-high">4.5</div>
+              </div>
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Proyecto 2</span>
+                  <span class="grade-weight">25%</span>
+                </div>
+                <div class="grade-score grade-high">5.0</div>
+              </div>
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Quices</span>
+                  <span class="grade-weight">20%</span>
+                </div>
+                <div class="grade-score grade-high">4.6</div>
+              </div>
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Proyecto Final</span>
+                  <span class="grade-weight">30%</span>
+                </div>
+                <div class="grade-score grade-high">4.8</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Curso 3: Física -->
+          <div class="course-card">
+            <div class="course-header">
+              <div class="course-info">
+                <h3 class="course-name">Física II</h3>
+                <div class="course-details">
+                  <span class="course-code">FIS202</span>
+                  <span class="course-credits">3 créditos</span>
+                  <span class="course-professor">Prof. Roberto Sánchez</span>
+                </div>
+              </div>
+              <div class="course-final">
+                <div class="final-label">Nota Final</div>
+                <div class="final-grade grade-medium">3.8</div>
+              </div>
+            </div>
+            <div class="course-grades">
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Parcial 1</span>
+                  <span class="grade-weight">30%</span>
+                </div>
+                <div class="grade-score grade-medium">3.5</div>
+              </div>
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Parcial 2</span>
+                  <span class="grade-weight">30%</span>
+                </div>
+                <div class="grade-score grade-high">4.0</div>
+              </div>
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Laboratorios</span>
+                  <span class="grade-weight">25%</span>
+                </div>
+                <div class="grade-score grade-medium">3.8</div>
+              </div>
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Examen Final</span>
+                  <span class="grade-weight">15%</span>
+                </div>
+                <div class="grade-score grade-medium">3.9</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Curso 4: Base de Datos -->
+          <div class="course-card">
+            <div class="course-header">
+              <div class="course-info">
+                <h3 class="course-name">Bases de Datos</h3>
+                <div class="course-details">
+                  <span class="course-code">BDD301</span>
+                  <span class="course-credits">3 créditos</span>
+                  <span class="course-professor">Prof. Ana Martínez</span>
+                </div>
+              </div>
+              <div class="course-final">
+                <div class="final-label">Nota Final</div>
+                <div class="final-grade grade-high">4.3</div>
+              </div>
+            </div>
+            <div class="course-grades">
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Diseño BD</span>
+                  <span class="grade-weight">30%</span>
+                </div>
+                <div class="grade-score grade-high">4.2</div>
+              </div>
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Consultas SQL</span>
+                  <span class="grade-weight">25%</span>
+                </div>
+                <div class="grade-score grade-high">4.5</div>
+              </div>
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Proyecto</span>
+                  <span class="grade-weight">35%</span>
+                </div>
+                <div class="grade-score grade-high">4.4</div>
+              </div>
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Participación</span>
+                  <span class="grade-weight">10%</span>
+                </div>
+                <div class="grade-score grade-high">4.0</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Curso 5: Inglés -->
+          <div class="course-card">
+            <div class="course-header">
+              <div class="course-info">
+                <h3 class="course-name">Inglés Intermedio II</h3>
+                <div class="course-details">
+                  <span class="course-code">ING204</span>
+                  <span class="course-credits">2 créditos</span>
+                  <span class="course-professor">Prof. Jennifer Smith</span>
+                </div>
+              </div>
+              <div class="course-final">
+                <div class="final-label">Nota Final</div>
+                <div class="final-grade grade-high">4.6</div>
+              </div>
+            </div>
+            <div class="course-grades">
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Speaking</span>
+                  <span class="grade-weight">30%</span>
+                </div>
+                <div class="grade-score grade-high">4.7</div>
+              </div>
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Writing</span>
+                  <span class="grade-weight">25%</span>
+                </div>
+                <div class="grade-score grade-high">4.5</div>
+              </div>
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Listening</span>
+                  <span class="grade-weight">25%</span>
+                </div>
+                <div class="grade-score grade-high">4.6</div>
+              </div>
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Reading</span>
+                  <span class="grade-weight">20%</span>
+                </div>
+                <div class="grade-score grade-high">4.7</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Curso 6: Ética -->
+          <div class="course-card">
+            <div class="course-header">
+              <div class="course-info">
+                <h3 class="course-name">Ética Profesional</h3>
+                <div class="course-details">
+                  <span class="course-code">ETI101</span>
+                  <span class="course-credits">2 créditos</span>
+                  <span class="course-professor">Prof. Luis Hernández</span>
+                </div>
+              </div>
+              <div class="course-final">
+                <div class="final-label">Nota Final</div>
+                <div class="final-grade grade-medium">3.5</div>
+              </div>
+            </div>
+            <div class="course-grades">
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Ensayo 1</span>
+                  <span class="grade-weight">25%</span>
+                </div>
+                <div class="grade-score grade-medium">3.3</div>
+              </div>
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Ensayo 2</span>
+                  <span class="grade-weight">25%</span>
+                </div>
+                <div class="grade-score grade-medium">3.6</div>
+              </div>
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Debate</span>
+                  <span class="grade-weight">30%</span>
+                </div>
+                <div class="grade-score grade-medium">3.5</div>
+              </div>
+              <div class="grade-item">
+                <div class="grade-header">
+                  <span class="grade-name">Participación</span>
+                  <span class="grade-weight">20%</span>
+                </div>
+                <div class="grade-score grade-medium">3.7</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botón de descarga -->
+        <div class="download-section">
+          <button class="btn-download">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Descargar Certificado de Notas
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"
+            ></path>
+            <path d="M9 22V12H15V22"></path>
+          </svg>
+        </div>
+        <div class="footer-text">
+          <p>Universidad Autónoma de Bucaramanga</p>
+          <p class="footer-copyright">© Todos los derechos reservados</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function filterPeriod(period) {
+        const buttons = document.querySelectorAll(".period-btn");
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        event.target.classList.add("active");
+
+        // Aquí iría la lógica para filtrar las notas por período
+        console.log("Filtrar por período:", period);
+      }
+    </script>
+  </body>
+</html>

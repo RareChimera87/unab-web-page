@@ -1,0 +1,544 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --primary-green: #8cc63f;
+  --orange-button: #f7931e;
+  --primary-blue: #4b61d1;
+  --purple-button: #8b2e99;
+  --gray-bg: #e8e8e8;
+  --gray-header: #999999;
+  --gray-footer: #808080;
+  --text-dark: #333333;
+  --text-gray: #999999;
+  --white: #ffffff;
+  --grade-high: #27ae60;
+  --grade-medium: #f39c12;
+  --grade-low: #e74c3c;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--gray-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  background-color: var(--gray-header);
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-dark);
+}
+
+.logo-u {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f7931e;
+}
+
+.logo-dots {
+  display: flex;
+  gap: 0.25rem;
+  margin-left: 0.25rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dot-orange {
+  background-color: #f7931e;
+}
+.dot-purple {
+  background-color: #8b2e99;
+}
+.dot-green {
+  background-color: #8cc63f;
+}
+.dot-blue {
+  background-color: #4b61d1;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-info {
+  text-align: right;
+}
+
+.user-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.user-role {
+  font-size: 0.75rem;
+  color: var(--white);
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-blue),
+    var(--purple-button)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Main Content */
+.main-content {
+  padding-top: 80px;
+  min-height: calc(100vh - 140px);
+}
+
+.notas-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  color: var(--text-gray);
+  font-size: 0.95rem;
+}
+
+/* Performance Summary */
+.performance-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary-card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.summary-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.summary-card.blue .summary-icon {
+  background-color: rgba(75, 97, 209, 0.15);
+  color: var(--primary-blue);
+}
+
+.summary-card.green .summary-icon {
+  background-color: rgba(140, 198, 63, 0.15);
+  color: var(--primary-green);
+}
+
+.summary-card.orange .summary-icon {
+  background-color: rgba(247, 147, 30, 0.15);
+  color: var(--orange-button);
+}
+
+.summary-card.purple .summary-icon {
+  background-color: rgba(139, 46, 153, 0.15);
+  color: var(--purple-button);
+}
+
+.summary-content {
+  flex: 1;
+}
+
+.summary-label {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+  margin-bottom: 0.5rem;
+}
+
+.summary-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.summary-detail {
+  font-size: 0.8rem;
+  color: var(--text-gray);
+}
+
+/* Period Filters */
+.period-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.period-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--text-gray);
+  background: var(--white);
+  color: var(--text-dark);
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.period-btn:hover {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+}
+
+.period-btn.active {
+  background: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: var(--white);
+}
+
+/* Grades Section */
+.grades-section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+/* Course Card */
+.course-card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+
+.course-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(75, 97, 209, 0.05),
+    rgba(139, 46, 153, 0.05)
+  );
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.course-info {
+  flex: 1;
+}
+
+.course-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.course-details {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.course-code,
+.course-credits,
+.course-professor {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+}
+
+.course-code {
+  font-weight: 600;
+  color: var(--primary-blue);
+}
+
+.course-final {
+  text-align: center;
+  padding: 1rem;
+  background: var(--white);
+  border-radius: 8px;
+  min-width: 100px;
+}
+
+.final-label {
+  font-size: 0.75rem;
+  color: var(--text-gray);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.final-grade {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Course Grades Grid */
+.course-grades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1px;
+  background: #e0e0e0;
+}
+
+.grade-item {
+  background: var(--white);
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.grade-item:hover {
+  background: #f5f5f5;
+}
+
+.grade-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.grade-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.grade-weight {
+  font-size: 0.75rem;
+  color: var(--text-gray);
+}
+
+.grade-score {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* Grade Colors */
+.grade-high {
+  color: var(--grade-high);
+  background-color: rgba(39, 174, 96, 0.1);
+}
+
+.grade-medium {
+  color: var(--grade-medium);
+  background-color: rgba(243, 156, 18, 0.1);
+}
+
+.grade-low {
+  color: var(--grade-low);
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+/* Download Section */
+.download-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.btn-download {
+  background-color: var(--primary-green);
+  color: var(--white);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: opacity 0.3s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-download:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--gray-footer);
+  padding: 1rem 2rem;
+  color: var(--white);
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-text {
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.footer-copyright {
+  opacity: 0.8;
+  font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .course-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .course-final {
+    width: 100%;
+  }
+
+  .course-grades {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .notas-container {
+    padding: 1rem;
+  }
+
+  .performance-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .period-filters {
+    gap: 0.5rem;
+  }
+
+  .period-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .course-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .course-grades {
+    grid-template-columns: 1fr;
+  }
+
+  .grade-item {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .summary-value {
+    font-size: 1.5rem;
+  }
+
+  .final-grade {
+    font-size: 1.5rem;
+  }
+
+  .course-name {
+    font-size: 1rem;
+  }
+}
