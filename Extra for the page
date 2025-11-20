@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Universidad</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #1e3a8a;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+        }
+
+        .sidebar h2 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .sidebar ul li a:hover {
+            color: #0f4c75;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 30px;
+            width: 100%;
+        }
+
+        header {
+            background-color: #1e3a8a;
+            padding: 10px 20px;
+            margin-bottom: 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            background-color: #0f4c75;
+            border-radius: 5px;
+        }
+
+        section h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+        }
+
+        form input, form select, form textarea {
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #3b82f6;
+            color: white;
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #0f4c75;
+        }
+
+        .banu-assistant {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            background-image: url('https://via.placeholder.com/80');
+            background-size: cover;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .banu-assistant:hover {
+            transform: scale(1.1);
+        }
+
+        .banu-chatbox {
+            position: fixed;
+            bottom: 120px;
+            right: 20px;
+            width: 300px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .banu-chatbox h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        .banu-chatbox input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .banu-chatbox button {
+            background-color: #3b82f6;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .banu-chatbox button:hover {
+            background-color: #0f4c75;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                position: relative;
+                height: auto;
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 15px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Portal Universidad</h2>
+        <ul>
+            <li><a href="#registro-estudiantes">Registro de Estudiantes</a></li>
+            <li><a href="#registro-funcionalidades">Registro de Funcionalidades</a></li>
+            <li><a href="#noticias">Noticias</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#academico">Área Académica</a></li>
+                    <li><a href="#investigacion">Investigación</a></li>
+                    <li><a href="#eventos">Eventos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="registro-estudiantes">
+            <h2>Registro de Estudiantes</h2>
+            <form action="#" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="matricula">Matrícula:</label>
+                <input type="text" id="matricula" name="matricula" required>
+
+                <label for="carrera">Carrera:</label>
+                <select id="carrera" name="carrera">
+                    <option value="ingenieria">Ingeniería</option>
+                    <option value="medicina">Medicina</option>
+                    <option value="derecho">Derecho</option>
+                    <option value="arquitectura">Arquitectura</option>
+                </select>
+
+                <button type="submit">Registrar Estudiante</button>
+            </form>
+        </section>
+
+        <section id="registro-funcionalidades">
+            <h2>Registro de Funcionalidades</h2>
+            <form action="#" method="POST">
+                <label for="funcion">Funcionalidad:</label>
+                <input type="text" id="funcion" name="funcion" required>
+
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+                <label for="prioridad">Prioridad:</label>
+                <select id="prioridad" name="prioridad">
+                    <option value="alta">Alta</option>
+                    <option value="media">Media</option>
+                    <option value="baja">Baja</option>
+                </select>
+
+                <button type="submit">Registrar Funcionalidad</button>
+            </form>
+        </section>
+    </div>
+
+    <div class="banu-assistant" onclick="toggleChatbox()"></div>
+
+    <div class="banu-chatbox" id="banu-chatbox">
+        <h3>¡Hola! Soy Banu, ¿en qué puedo ayudarte?</h3>
+        <input type="text" id="user-question" placeholder="Escribe aquí tu pregunta...">
+        <button onclick="handleUserQuestion()">Buscar</button>
+    </div>
+
+    <script>
+        function toggleChatbox() {
+            const chatbox = document.getElementById('banu-chatbox');
+            chatbox.style.display = chatbox.style.display === 'none' ? 'flex' : 'none';
+        }
+
+        function handleUserQuestion() {
+            const question = document.getElementById('user-question').value.toLowerCase();
+            if (question.includes('estudiantes') || question.includes('registro de estudiantes')) {
+                window.location.href = '#registro-estudiantes';
+            } else if (question.includes('funcionalidades') || question.includes('registro de funcionalidades')) {
+                window.location.href = '#registro-funcionalidades';
+            } else if (question.includes('noticias')) {
+                window.location.href = '#noticias';
