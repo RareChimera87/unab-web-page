@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noticias - MiPortal U</title>
+    <link rel="stylesheet" href="assets/css/noticias.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="header-content">
+        <div class="logo">
+          <span class="logo-text">MiPortal</span>
+          <span class="logo-u">U</span>
+          <div class="logo-dots">
+            <span class="dot dot-blue"></span>
+            <span class="dot dot-green"></span>
+            <span class="dot dot-orange"></span>
+            <span class="dot dot-purple"></span>
+          </div>
+        </div>
+        <div class="header-user">
+          <div class="user-info">
+            <div class="user-name">Estudiante UNAB</div>
+            <div class="user-role">Ingeniería de Sistemas</div>
+          </div>
+          <div class="user-avatar">EU</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="news-container">
+        <div class="page-header">
+          <h1 class="page-title">Noticias Universitarias</h1>
+          <p class="page-subtitle">
+            Mantente informado sobre lo que sucede en UNAB
+          </p>
+        </div>
+
+        <!-- Filtros -->
+        <div class="news-filters">
+          <button class="filter-btn active" onclick="filterNews('todas')">
+            Todas
+          </button>
+          <button class="filter-btn" onclick="filterNews('academicas')">
+            Académicas
+          </button>
+          <button class="filter-btn" onclick="filterNews('eventos')">
+            Eventos
+          </button>
+          <button class="filter-btn" onclick="filterNews('deportes')">
+            Deportes
+          </button>
+          <button class="filter-btn" onclick="filterNews('cultura')">
+            Cultura
+          </button>
+        </div>
+
+        <!-- Noticia Destacada -->
+        <div class="featured-news">
+          <div class="featured-image">
+            <div class="image-placeholder featured-placeholder">
+              <svg
+                width="80"
+                height="80"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+            </div>
+            <div class="featured-badge">Destacada</div>
+          </div>
+          <div class="featured-content">
+            <div class="news-category orange">Eventos</div>
+            <h2 class="featured-title">
+              UNAB celebra 40 años de excelencia académica
+            </h2>
+            <p class="featured-description">
+              La Universidad Autónoma de Bucaramanga conmemora cuatro décadas de
+              formación profesional con una serie de eventos académicos y
+              culturales. La celebración incluirá conferencias magistrales,
+              exposiciones y actividades deportivas durante todo el mes.
+            </p>
+            <div class="news-meta">
+              <span class="meta-date">
+                <svg
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                20 de Noviembre, 2024
+              </span>
+              <span class="meta-author">Por: Comunicaciones UNAB</span>
+            </div>
+            <button class="btn-read-more">Leer más</button>
+          </div>
+        </div>
+
+        <!-- Grid de Noticias -->
+        <div class="news-grid">
+          <!-- Noticia 1 -->
+          <article class="news-card" data-category="academicas">
+            <div class="news-image">
+              <div class="image-placeholder">
+                <svg
+                  width="40"
+                  height="40"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="news-content">
+              <div class="news-category blue">Académicas</div>
+              <h3 class="news-title">Nuevos programas de posgrado para 2025</h3>
+              <p class="news-excerpt">
+                La universidad amplía su oferta académica con tres nuevas
+                maestrías en el área de tecnología e innovación.
+              </p>
+              <div class="news-footer">
+                <span class="news-date">18 Nov 2024</span>
+                <a href="#" class="news-link">Leer más →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Noticia 2 -->
+          <article class="news-card" data-category="eventos">
+            <div class="news-image">
+              <div class="image-placeholder">
+                <svg
+                  width="40"
+                  height="40"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="news-content">
+              <div class="news-category orange">Eventos</div>
+              <h3 class="news-title">Feria de emprendimiento universitario</h3>
+              <p class="news-excerpt">
+                Estudiantes presentarán sus proyectos innovadores en la feria
+                anual que se realizará el próximo mes.
+              </p>
+              <div class="news-footer">
+                <span class="news-date">17 Nov 2024</span>
+                <a href="#" class="news-link">Leer más →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Noticia 3 -->
+          <article class="news-card" data-category="deportes">
+            <div class="news-image">
+              <div class="image-placeholder">
+                <svg
+                  width="40"
+                  height="40"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path
+                    d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"
+                  ></path>
+                  <path d="M2 12h20"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="news-content">
+              <div class="news-category green">Deportes</div>
+              <h3 class="news-title">Equipo de fútbol campeón regional</h3>
+              <p class="news-excerpt">
+                El equipo representativo logró el primer lugar en el torneo
+                interuniversitario de la región.
+              </p>
+              <div class="news-footer">
+                <span class="news-date">15 Nov 2024</span>
+                <a href="#" class="news-link">Leer más →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Noticia 4 -->
+          <article class="news-card" data-category="cultura">
+            <div class="news-image">
+              <div class="image-placeholder">
+                <svg
+                  width="40"
+                  height="40"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M9 18V5l12-2v13"></path>
+                  <circle cx="6" cy="18" r="3"></circle>
+                  <circle cx="18" cy="16" r="3"></circle>
+                </svg>
+              </div>
+            </div>
+            <div class="news-content">
+              <div class="news-category purple">Cultura</div>
+              <h3 class="news-title">Festival de arte y música UNAB</h3>
+              <p class="news-excerpt">
+                Tres días de presentaciones artísticas y musicales con la
+                participación de estudiantes y artistas invitados.
+              </p>
+              <div class="news-footer">
+                <span class="news-date">14 Nov 2024</span>
+                <a href="#" class="news-link">Leer más →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Noticia 5 -->
+          <article class="news-card" data-category="academicas">
+            <div class="news-image">
+              <div class="image-placeholder">
+                <svg
+                  width="40"
+                  height="40"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="news-content">
+              <div class="news-category blue">Académicas</div>
+              <h3 class="news-title">Convocatoria de becas internacionales</h3>
+              <p class="news-excerpt">
+                Apertura de inscripciones para becas de intercambio con
+                universidades de Europa y Estados Unidos.
+              </p>
+              <div class="news-footer">
+                <span class="news-date">12 Nov 2024</span>
+                <a href="#" class="news-link">Leer más →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Noticia 6 -->
+          <article class="news-card" data-category="eventos">
+            <div class="news-image">
+              <div class="image-placeholder">
+                <svg
+                  width="40"
+                  height="40"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                  <polyline points="17 2 12 7 7 2"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="news-content">
+              <div class="news-category orange">Eventos</div>
+              <h3 class="news-title">Semana de la ciencia y la tecnología</h3>
+              <p class="news-excerpt">
+                Conferencias, talleres y demostraciones sobre las últimas
+                tendencias en ciencia y tecnología.
+              </p>
+              <div class="news-footer">
+                <span class="news-date">10 Nov 2024</span>
+                <a href="#" class="news-link">Leer más →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Paginación -->
+        <div class="pagination">
+          <button class="page-btn" disabled>← Anterior</button>
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">Siguiente →</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"
+            ></path>
+            <path d="M9 22V12H15V22"></path>
+          </svg>
+        </div>
+        <div class="footer-text">
+          <p>Universidad Autónoma de Bucaramanga</p>
+          <p class="footer-copyright">© Todos los derechos reservados</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function filterNews(category) {
+        const cards = document.querySelectorAll(".news-card");
+        const buttons = document.querySelectorAll(".filter-btn");
+
+        // Actualizar botones activos
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        event.target.classList.add("active");
+
+        // Filtrar tarjetas
+        cards.forEach((card) => {
+          if (category === "todas" || card.dataset.category === category) {
+            card.style.display = "flex";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
