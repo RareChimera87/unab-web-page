@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - MiPortal U</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-text">MiPortal</span>
+                <span class="logo-u">U</span>
+                <div class="logo-dots">
+                    <span class="dot dot-blue"></span>
+                    <span class="dot dot-green"></span>
+                    <span class="dot dot-orange"></span>
+                    <span class="dot dot-purple"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="register-container">
+            <div class="register-card">
+                <!-- Progress Steps -->
+                <div class="progress-steps">
+                    <div class="step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Datos Personales</div>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Información Académica</div>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Cuenta</div>
+                    </div>
+                </div>
+
+                <h1 class="register-title">Crear Cuenta</h1>
+                <p class="register-subtitle">Completa el formulario para registrarte en MiPortal U</p>
+
+                <!-- Step 1: Datos Personales -->
+                <div class="form-step" id="step1">
+                    <h2 class="step-title">Datos Personales</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Nombres <span class="required">*</span></label>
+                            <input type="text" id="firstName" placeholder="Ingresa tus nombres" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Apellidos <span class="required">*</span></label>
+                            <input type="text" id="lastName" placeholder="Ingresa tus apellidos" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="docType">Tipo de Documento <span class="required">*</span></label>
+                            <select id="docType" required>
+                                <option value="">Selecciona...</option>
+                                <option value="cc">Cédula de Ciudadanía</option>
+                                <option value="ti">Tarjeta de Identidad</option>
+                                <option value="ce">Cédula de Extranjería</option>
+                                <option value="passport">Pasaporte</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="docNumber">Número de Documento <span class="required">*</span></label>
+                            <input type="text" id="docNumber" placeholder="Ingresa tu número de documento" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="birthDate">Fecha de Nacimiento <span class="required">*</span></label>
+                            <input type="date" id="birthDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Género <span class="required">*</span></label>
+                            <select id="gender" required>
+                                <option value="">Selecciona...</option>
+                                <option value="m">Masculino</option>
+                                <option value="f">Femenino</option>
+                                <option value="o">Otro</option>
+                                <option value="na">Prefiero no decirlo</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Teléfono / Celular <span class="required">*</span></label>
+                        <input type="tel" id="phone" placeholder="Ej: 3001234567" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Dirección de Residencia <span class="required">*</span></label>
+                        <input type="text" id="address" placeholder="Ingresa tu dirección completa" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">Ciudad <span class="required">*</span></label>
+                            <input type="text" id="city" placeholder="Ciudad" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="department">Departamento <span class="required">*</span></label>
+                            <select id="department" required>
+                                <option value="">Selecciona...</option>
+                                <option value="santander">Santander</option>
+                                <option value="cundinamarca">Cundinamarca</option>
+                                <option value="antioquia">Antioquia</option>
+                                <option value="valle">Valle del Cauca</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-next" onclick="nextStep(2)">
+                            Siguiente
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Información Académica -->
+                <div class="form-step" id="step2" style="display: none;">
+                    <h2 class="step-title">Información Académica</h2>
+
+                    <div class="form-group">
+                        <label for="studentType">Tipo de Estudiante <span class="required">*</span></label>
+                        <select id="studentType" required>
+                            <option value="">Selecciona...</option>
+                            <option value="nuevo">Estudiante Nuevo</option>
+                            <option value="transferencia">Transferencia</option>
+                            <option value="reingreso">Reingreso</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="faculty">Facultad <span class="required">*</span></label>
+                        <select id="faculty" required onchange="updatePrograms()">
+                            <option value="">Selecciona...</option>
+                            <option value="ingenieria">Facultad de Ingenierías</option>
+                            <option value="salud">Facultad de Ciencias de la Salud</option>
+                            <option value="juridicas">Facultad de Ciencias Jurídicas y Políticas</option>
+                            <option value="economicas">Facultad de Ciencias Económicas</option>
+                            <option value="sociales">Facultad de Ciencias Sociales</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="program">Programa Académico <span class="required">*</span></label>
+                        <select id="program" required>
+                            <option value="">Primero selecciona una facultad</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="modality">Modalidad <span class="required">*</span></label>
+                            <select id="modality" required>
+                                <option value="">Selecciona...</option>
+                                <option value="presencial">Presencial</option>
+                                <option value="virtual">Virtual</option>
+                                <option value="mixta">Mixta</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="schedule">Jornada <span class="required">*</span></label>
+                            <select id="schedule" required>
+                                <option value="">Selecciona...</option>
+                                <option value="diurna">Diurna</option>
+                                <option value="nocturna">Nocturna</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="highSchool">Colegio de Egreso <span class="required">*</span></label>
+                        <input type="text" id="highSchool" placeholder="Nombre del colegio donde te graduaste" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="graduationYear">Año de Graduación <span class="required">*</span></label>
+                            <input type="number" id="graduationYear" placeholder="Ej: 2024" min="1990" max="2025" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="icfesScore">Puntaje ICFES</label>
+                            <input type="number" id="icfesScore" placeholder="Puntaje global (opcional)">
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-prev" onclick="prevStep(1)">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                            Anterior
+                        </button>
+                        <button type="button" class="btn-next" onclick="nextStep(3)">
+                            Siguiente
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Cuenta -->
+                <div class="form-step" id="step3" style="display: none;">
+                    <h2 class="step-title">Información de Cuenta</h2>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico Personal <span class="required">*</span></label>
+                        <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required>
+                        <span class="input-hint">Se enviará un correo de verificación a esta dirección</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username">Nombre de Usuario <span class="required">*</span></label>
+                        <input type="text" id="username" placeholder="Elige un nombre de usuario" required>
+                        <span class="input-hint">Este será tu identificador para ingresar al portal</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Contraseña <span class="required">*</span></label>
+                        <div class="password-group">
+                            <input type="password" id="password" placeholder="Crea una contraseña segura" required>
+                            <button type="button" class="toggle-password" onclick="togglePassword('password')">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="password-strength" id="passwordStrength"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirmar Contraseña <span class="required">*</span></label>
+                        <div class="password-group">
+                            <input type="password" id="confirmPassword" placeholder="Repite tu contraseña" required>
+                            <button type="button" class="toggle-password" onclick="togglePassword('confirmPassword')">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terms" required>
+                            <span class="checkmark"></span>
+                            Acepto los <a href="#">Términos y Condiciones</a> y la <a href="#">Política de Privacidad</a> <span class="required">*</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter">
+                            <span class="checkmark"></span>
+                            Deseo recibir noticias y actualizaciones de la universidad
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-prev" onclick="prevStep(2)">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                            Anterior
+                        </button>
+                        <button type="submit" class="btn-submit" onclick="submitForm(event)">
+                            Crear Cuenta
+                        </button>
+                    </div>
+                </div>
+
+                <div class="login-link">
+                    ¿Ya tienes una cuenta? <a href="login.html">Iniciar Sesión</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"></path>
+                    <path d="M9 22V12H15V22"></path>
+                </svg>
+            </div>
+            <div class="footer-text">
+                <p>Universidad Autónoma de Bucaramanga</p>
+                <p class="footer-copyright">© Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentStep = 1;
+
+        function nextStep(step) {
+            document.getElementById('step' + currentStep).style.display = 'none';
+            document.getElementById('step' + step).style.display = 'block';
+            
+            updateStepIndicator(currentStep, step);
+            currentStep = step;
+        }
+
+        function prevStep(step) {
+            document.getElementById('step' + currentStep).style.display = 'none';
+            document.getElementById('step' + step).style.display = 'block';
+            
+            updateStepIndicator(currentStep, step);
+            currentStep = step;
+        }
+
+        function updateStepIndicator(oldStep, newStep) {
+            const steps = document.querySelectorAll('.step');
+            steps.forEach((s, index) => {
+                if (index + 1 <= newStep) {
+                    s.classList.add('active');
+                } else {
+                    s.classList.remove('active');
+                }
+            });
+        }
+
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            input.type = input.type === 'password' ? 'text' : 'password';
+        }
+
+        function updatePrograms() {
+            const faculty = document.getElementById('faculty').value;
+            const programSelect = document.getElementById('program');
+            
+            const programs = {
+                ingenieria: [
+                    'Ingeniería de Sistemas',
+                    'Ingeniería Industrial',
+                    'Ingeniería Mecatrónica',
+                    'Ingeniería de Energía',
+                    'Ingeniería Financiera'
+                ],
+                salud: [
+                    'Medicina',
+                    'Enfermería',
+                    'Psicología',
+                    'Instrumentación Quirúrgica'
+                ],
+                juridicas: [
+                    'Derecho',
+                    'Ciencias Políticas'
+                ],
+                economicas: [
+                    'Administración de Empresas',
+                    'Contaduría Pública',
+                    'Economía',
+                    'Negocios Internacionales'
+                ],
+                sociales: [
+                    'Comunicación Social',
+                    'Trabajo Social',
+                    'Educación'
+                ]
+            };
+
+            programSelect.innerHTML = '<option value="">Selecciona un programa</option>';
+            
+            if (programs[faculty]) {
+                programs[faculty].forEach(prog => {
+                    const option = document.createElement('option');
+                    option.value = prog.toLowerCase().replace(/ /g, '-');
+                    option.textContent = prog;
+                    programSelect.appendChild(option);
+                });
+            }
+        }
+
+        // Password strength checker
+        document.getElementById('password').addEventListener('input', function() {
+            const password = this.value;
+            const strengthDiv = document.getElementById('passwordStrength');
+            let strength = 0;
+            let message = '';
+            let color = '';
+
+            if (password.length >= 8) strength++;
+            if (password.match(/[a-z]/)) strength++;
+            if (password.match(/[A-Z]/)) strength++;
+            if (password.match(/[0-9]/)) strength++;
+            if (password.match(/[^a-zA-Z0-9]/)) strength++;
+
+            if (password.length === 0) {
+                message = '';
+            } else if (strength < 2) {
+                message = 'Débil';
+                color = '#e74c3c';
+            } else if (strength < 4) {
+                message = 'Media';
+                color = '#F7931E';
+            } else {
+                message = 'Fuerte';
+                color = '#8CC63F';
+            }
+
+            strengthDiv.innerHTML = message ? '<span style="color: ' + color + '">' + message + '</span>' : '';
+        });
+
+        function submitForm(event) {
+            event.preventDefault();
+            
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Las contraseñas no coinciden');
+                return;
+            }
+
+            if (!document.getElementById('terms').checked) {
+                alert('Debes aceptar los términos y condiciones');
+                return;
+            }
+
+            alert('¡Registro exitoso! Se ha enviado un correo de verificación.');
+            // Aquí iría la lógica de envío al servidor
+        }
+    </script>
+</body>
+</html>
